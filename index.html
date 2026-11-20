@@ -1,1400 +1,1437 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Muhammad Abid Wijiyanto | Portfolio</title>
+    <!-- Primary SEO Meta Tags -->
+    <title>Muhammad Abid Wijiyanto | Portfolio — Mathematics & Data Analytics</title>
+    <meta name="title" content="Muhammad Abid Wijiyanto | Portfolio — Mathematics & Data Analytics">
+    <meta name="description" content="Portofolio profesional Muhammad Abid Wijiyanto, mahasiswa Matematika UIN Syarif Hidayatullah Jakarta dengan peminatan Data Science, Data Analysis, Business & Operations.">
+    <meta name="keywords" content="Muhammad Abid Wijiyanto, Data Science, Data Analyst, Business Operations, Matematika UIN Jakarta, Portfolio, Python, R, Statistical Modeling">
+    <meta name="author" content="Muhammad Abid Wijiyanto">
 
-    <meta name="description" content="Portofolio profesional Muhammad Abid Wijiyanto, mahasiswa Matematika dengan peminatan Data Science.">
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://muhammadabidwijiyanto-ops.github.io/">
+    <meta property="og:title" content="Muhammad Abid Wijiyanto | Portfolio — Mathematics & Data Analytics">
+    <meta property="og:description" content="Portofolio profesional Muhammad Abid Wijiyanto, mahasiswa Matematika dengan peminatan Data Science, Data Analysis, Business & Operations.">
+    <meta property="og:image" content="assets/profile.jpg">
 
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Muhammad Abid Wijiyanto | Portfolio">
+    <meta property="twitter:description" content="Portofolio profesional Muhammad Abid Wijiyanto, mahasiswa Matematika peminatan Data Science.">
+    <meta property="twitter:image" content="assets/profile.jpg">
+
+    <!-- Favicon (Modern High-Tech SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2307090e'/><text x='50%' y='66%' font-size='56' font-weight='900' font-family='sans-serif' fill='%2338bdf8' text-anchor='middle'>A</text></svg>">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="navbar">
-        <a href="#home" class="logo">ABID.</a>
+    <!-- ==================== HEADER & FLOATING NAVBAR ==================== -->
+    <header class="header-wrapper" id="headerWrapper">
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="#home" class="logo" aria-label="Home">
+                ABID<span class="logo-dot">.</span>
+            </a>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#contact">Contact</a>
+            <div class="nav-links">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#education" class="nav-item">Education</a>
+                <a href="#experience" class="nav-item">Experience</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#achievements" class="nav-item">Achievements</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="assets/CV-Abid.pdf" target="_blank" rel="noopener noreferrer" class="nav-btn-cv" aria-label="Download CV Muhammad Abid Wijiyanto">
+                    <span>CV</span>
+                    <span>↓</span>
+                </a>
+
+                <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobileDrawer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <!-- HOME SECTION -->
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Menu">
+        <div class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-item active">Home <span>↗</span></a>
+            <a href="#about" class="mobile-nav-item">About <span>↗</span></a>
+            <a href="#education" class="mobile-nav-item">Education <span>↗</span></a>
+            <a href="#experience" class="mobile-nav-item">Experience <span>↗</span></a>
+            <a href="#skills" class="mobile-nav-item">Skills <span>↗</span></a>
+            <a href="#projects" class="mobile-nav-item">Projects <span>↗</span></a>
+            <a href="#achievements" class="mobile-nav-item">Achievements <span>↗</span></a>
+            <a href="#contact" class="mobile-nav-item">Contact <span>↗</span></a>
+        </div>
+        <div class="mobile-cv-action">
+            <a href="assets/CV-Abid.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Unduh CV / Resume <span>↓</span>
+            </a>
+        </div>
+    </aside>
+
     <main>
+        <!-- ==================== HERO SECTION ==================== -->
         <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-grid">
 
-            <div class="hero-content">
+                    <div class="hero-content">
+                        <div class="status-pill">
+                            <span class="status-dot"></span>
+                            <span>Open to Internship & Collaborative Opportunities</span>
+                        </div>
 
-                <span class="availability">
-                    Open to Internship Opportunities
-                </span>
+                        <p class="hero-greeting">// Halo, saya</p>
 
-                <p class="intro">Halo, saya</p>
+                        <h1>
+                            Muhammad Abid <br>
+                            <span class="gradient-text">Wijiyanto</span>
+                        </h1>
 
-                <h1>Muhammad Abid Wijiyanto</h1>
+                        <div class="hero-subtitle">
+                            <span>Mahasiswa Matematika</span>
+                            <span class="hero-subtitle-divider">•</span>
+                            <span>Data Analysis, Business & Operations</span>
+                        </div>
 
-                <h2>
-                    Mahasiswa Matematika |
-                    Data Analysis, Business & Operations
-                </h2>
+                        <p class="hero-description">
+                            Mahasiswa Matematika UIN Syarif Hidayatullah Jakarta (peminatan Data Science). Berfokus pada analisis data kuantitatif, pemodelan statistik, dan operasional bisnis untuk menguraikan permasalahan kompleks serta mendukung pengambilan keputusan strategis.
+                        </p>
 
-                <p class="description">
-                    Saya merupakan mahasiswa Program Studi Matematika
-                    di UIN Syarif Hidayatullah Jakarta dengan peminatan
-                    Data Science. Saya memiliki ketertarikan pada
-                    analisis data, bisnis, dan operasional, serta senang
-                    mengembangkan pendekatan analitis untuk memahami
-                    permasalahan dan mendukung pengambilan keputusan.
-                </p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">
+                                Lihat Proyek Analisis <span>→</span>
+                            </a>
+                            <a href="assets/CV-Abid.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                Unduh CV <span>↓</span>
+                            </a>
+                            <a href="#contact" class="btn btn-ghost">
+                                Hubungi Saya
+                            </a>
+                        </div>
+                    </div>
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn primary">
-                        Lihat Proyek
-                    </a>
+                    <div class="hero-visual">
+                        <div class="hero-image-card">
+                            <div class="hero-image-inner">
+                                <img
+                                    src="assets/profile.jpg"
+                                    alt="Foto Profil Profesional Muhammad Abid Wijiyanto"
+                                    loading="eager"
+                                >
+                            </div>
 
-                    <a href="#contact" class="btn secondary">
-                        Hubungi Saya
-                    </a>
+                            <!-- Floating Metric Badge 1 -->
+                            <div class="hero-metric-badge metric-badge-top">
+                                <div class="metric-badge-icon">∑</div>
+                                <div class="metric-badge-info">
+                                    <span>Peminatan</span>
+                                    <strong>Data Science</strong>
+                                </div>
+                            </div>
+
+                            <!-- Floating Metric Badge 2 -->
+                            <div class="hero-metric-badge metric-badge-bottom">
+                                <div class="metric-badge-icon">✦</div>
+                                <div class="metric-badge-info">
+                                    <span>IPK Terkini</span>
+                                    <strong>3,61 / 4,00</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
-
-            <div class="hero-image">
-                <img
-                    src="assets/profile.jpg"
-                    alt="Foto Muhammad Abid Wijiyanto"
-                >
-            </div>
-
         </section>
 
-<!-- ABOUT SECTION -->
-<section id="about" class="about-section">
-
-    <div class="section-heading">
-        <span class="section-label">GET TO KNOW ME</span>
-        <h2>Tentang Saya</h2>
-        <p>Mengenal latar belakang, minat, dan perjalanan saya.</p>
-    </div>
-
-    <div class="about-container">
-
-        <!-- ABOUT DESCRIPTION -->
-        <div class="about-description">
-
-            <p>
-                Saya adalah mahasiswa Program Studi Matematika
-                di UIN Syarif Hidayatullah Jakarta dengan
-                peminatan Data Science. Saya memiliki
-                ketertarikan pada analisis data, bisnis,
-                dan operasional.
-            </p>
-
-            <p>
-                Melalui pembelajaran matematika dan berbagai
-                proyek akademik, saya mengembangkan kemampuan
-                berpikir logis, analitis, dan sistematis.
-                Saya tertarik mengolah data menjadi informasi
-                yang bermakna untuk memahami permasalahan
-                dan mendukung pengambilan keputusan.
-            </p>
-
-            <p>
-                Di luar kegiatan akademik, saya aktif dalam
-                organisasi kemahasiswaan dan memiliki
-                pengalaman di bidang administrasi,
-                operasional, serta koordinasi kegiatan.
-                Pengalaman tersebut membantu saya
-                mengembangkan kemampuan komunikasi,
-                kolaborasi, kepemimpinan, dan tanggung jawab.
-            </p>
-
-            <p>
-                Saya percaya bahwa proses belajar tidak
-                berhenti di ruang kelas. Karena itu, saya
-                terus berupaya mengembangkan kompetensi
-                melalui proyek, pengalaman organisasi,
-                dan keterlibatan dalam lingkungan profesional.
-            </p>
-
-        </div>
-
-        <!-- PERSONAL HIGHLIGHTS -->
-        <div class="about-highlights">
-
-            <div class="highlight-card">
-                <div class="highlight-icon">01</div>
-                <div>
-                    <h3>Education</h3>
-                    <p>Mathematics — UIN Jakarta</p>
-                </div>
-            </div>
-
-            <div class="highlight-card">
-                <div class="highlight-icon">02</div>
-                <div>
-                    <h3>Interests</h3>
-                    <p>Data & Business Analytics</p>
-                </div>
-            </div>
-
-            <div class="highlight-card">
-                <div class="highlight-icon">03</div>
-                <div>
-                    <h3>Organization</h3>
-                    <p>HIMATIKA UIN Jakarta</p>
-                </div>
-            </div>
-
-            <div class="highlight-card">
-                <div class="highlight-icon">04</div>
-                <div>
-                    <h3>Experience</h3>
-                    <p>Administration & Operations</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- EDUCATION SECTION -->
-<section id="education" class="education-section">
-
-    <div class="section-heading">
-        <span class="section-label">MY ACADEMIC JOURNEY</span>
-        <h2>Pendidikan</h2>
-        <p>Latar belakang akademik dan perjalanan pendidikan saya.</p>
-    </div>
-
-    <div class="education-container">
-
-        <div class="education-timeline">
-
-            <div class="timeline-dot"></div>
-
-            <div class="education-card">
-
-                <div class="education-header">
-                    <span class="education-period">
-                        2024 – Sekarang
-                    </span>
-
-                    <span class="education-status">
-                        Sedang Berlangsung
-                    </span>
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">GET TO KNOW ME</span>
+                    <h2>Tentang Saya</h2>
+                    <p>Mengenal pendekatan analitis, cara berpikir matematis, dan orientasi profesional saya.</p>
                 </div>
 
-                <h3>UIN Syarif Hidayatullah Jakarta</h3>
+                <div class="about-bento-grid">
+                    <!-- Editorial Story Card (Concise & Impactful) -->
+                    <div class="bento-card about-story-card">
+                        <div class="about-story-text">
+                            <p>
+                                Melalui fondasi matematika terapan, saya terbiasa mendekati permasalahan melalui logika kuantitatif, struktur analitis, dan pembuktian berbasis data. Ketertarikan utama saya terletak pada transformasi data mentah menjadi wawasan bermakna (*actionable insights*) guna memandu perumusan keputusan bisnis yang presisi dan efisien.
+                            </p>
+                            <p>
+                                Pengalaman di bidang administrasi operasional dan kepemimpinan organisasi memperkuat kemampuan koordinasi lintas tim, komunikasi analitis, serta ketahanan dalam manajemen eksekusi. Saya terus mengasah kompetensi melalui proyek komputasi riil, partisipasi kompetisi data ilmiah, dan keterlibatan aktif dalam lingkungan profesional.
+                            </p>
+                        </div>
 
-                <h4>S1 Matematika</h4>
-
-                <p class="education-faculty">
-                    Fakultas Sains dan Teknologi
-                </p>
-
-                <div class="education-details">
-
-                    <div class="education-detail-item">
-                        <span>IPK</span>
-                        <strong>3,61 / 4,00</strong>
+                        <div class="about-story-footer">
+                            <span class="about-quote">
+                                <span>✦</span> "Transforming quantitative logic into actionable business solutions."
+                            </span>
+                            <span class="mono-badge badge-cyan">Matematika & Data Science</span>
+                        </div>
                     </div>
 
-                    <div class="education-detail-item">
-                        <span>Semester</span>
-                        <strong>5</strong>
+                    <!-- 4 Core Pillars Bento Cards -->
+                    <div class="about-pillars-stack">
+                        <div class="pillar-card">
+                            <div class="pillar-num">01</div>
+                            <div class="pillar-content">
+                                <h3>Education</h3>
+                                <p>S1 Matematika — UIN Syarif Hidayatullah Jakarta (Peminatan Data Science)</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-num">02</div>
+                            <div class="pillar-content">
+                                <h3>Interests</h3>
+                                <p>Data Analytics, Statistical Modeling & Business Operations</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-num">03</div>
+                            <div class="pillar-content">
+                                <h3>Organization</h3>
+                                <p>HIMATIKA UIN Jakarta (Staf INVERS & RASIO)</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-num">04</div>
+                            <div class="pillar-content">
+                                <h3>Experience</h3>
+                                <p>Staf Administrasi & Operasional di CV Panji Jaya Abadi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EDUCATION SECTION ==================== -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">ACADEMIC FOUNDATION</span>
+                    <h2>Pendidikan</h2>
+                    <p>Latar belakang akademik formal dan fokus pendalaman disiplin ilmu saya.</p>
+                </div>
+
+                <div class="education-wrapper">
+                    <div class="education-card-main">
+                        <div class="education-header-top">
+                            <div>
+                                <h3 class="education-institution">UIN Syarif Hidayatullah Jakarta</h3>
+                                <h4 class="education-degree">S1 Matematika</h4>
+                                <p class="education-faculty">Fakultas Sains dan Teknologi</p>
+                            </div>
+                            <div style="display: flex; gap: 6px; flex-direction: column; align-items: flex-end;">
+                                <span class="mono-badge badge-cyan">2024 – Sekarang</span>
+                                <span class="mono-badge badge-emerald">Sedang Berlangsung</span>
+                            </div>
+                        </div>
+
+                        <!-- Academic Triad Grid -->
+                        <div class="education-triad">
+                            <div class="triad-box">
+                                <span class="triad-label">Indeks Prestasi Kumulatif</span>
+                                <div class="triad-value">
+                                    3,61 <span class="triad-scale">/ 4,00</span>
+                                </div>
+                            </div>
+
+                            <div class="triad-box">
+                                <span class="triad-label">Semester Aktif</span>
+                                <div class="triad-value">
+                                    5 <span class="triad-scale">Tingkat Sarjana</span>
+                                </div>
+                            </div>
+
+                            <div class="triad-box">
+                                <span class="triad-label">Peminatan Utama</span>
+                                <div class="triad-value" style="font-size: 19px; color: var(--accent-primary);">
+                                    Data Science
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Academic Focus -->
+                        <div class="education-focus-box">
+                            <h4>Fokus Akademik</h4>
+                            <p>
+                                Matematika murni, analisis data kuantitatif, statistika inferensial, pemodelan matematis, analisis regresi, pengujian hipotesis, dan komputasi statistik berbasis algoritma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EXPERIENCE SECTION ==================== -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">TRACK RECORD & LEADERSHIP</span>
+                    <h2>Pengalaman</h2>
+                    <p>Rekam jejak profesional, dedikasi dalam organisasi kemahasiswaan, dan kepemimpinan program strategis.</p>
+                </div>
+
+                <!-- Category Navigation Tabs -->
+                <div class="experience-tabs-nav" role="tablist">
+                    <button class="exp-tab-btn active" data-filter="all" role="tab" aria-selected="true">Semua Pengalaman</button>
+                    <button class="exp-tab-btn" data-filter="work" role="tab" aria-selected="false">Pengalaman Kerja</button>
+                    <button class="exp-tab-btn" data-filter="org" role="tab" aria-selected="false">Organisasi</button>
+                    <button class="exp-tab-btn" data-filter="committee" role="tab" aria-selected="false">Kepanitiaan</button>
+                </div>
+
+                <!-- 1. PENGALAMAN KERJA (PROFESSIONAL SPOTLIGHT) -->
+                <div class="exp-category-group" data-category="work">
+                    <h3 class="exp-category-title">Pengalaman Kerja Profesional</h3>
+
+                    <div class="exp-card exp-card-work">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Staf Administrasi dan Operasional</h3>
+                                <h4 class="exp-org">CV Panji Jaya Abadi</h4>
+                                <p class="exp-location">📍 Tangerang Selatan, Indonesia</p>
+                            </div>
+                            <div style="display: flex; gap: 8px; align-items: center;">
+                                <span class="mono-badge badge-cyan">Desember 2025 – Sekarang</span>
+                                <span class="mono-badge badge-indigo">Profesional</span>
+                            </div>
+                        </div>
+
+                        <ul class="exp-list">
+                            <li>
+                                <strong>Pencatatan & Pengolahan Data Harian:</strong> Mencatat transaksi harian, setoran keuangan, dan data operasional, termasuk berat ayam serta data logistik pengiriman dari pengemudi secara akurat.
+                            </li>
+                            <li>
+                                <strong>Dukungan Pelayanan & Transaksi:</strong> Menyiapkan bon pelanggan dan memberikan dukungan pelayanan langsung kepada pelanggan untuk menjaga kelancaran alur transaksi.
+                            </li>
+                            <li>
+                                <strong>Koordinasi Operasional:</strong> Mendukung pelaksanaan kegiatan administrasi dan operasional sehari-hari demi efisiensi proses kerja di lingkungan usaha.
+                            </li>
+                        </ul>
+
+                        <div class="exp-tags">
+                            <span class="exp-tag">Administrasi</span>
+                            <span class="exp-tag">Operasional</span>
+                            <span class="exp-tag">Pencatatan Data</span>
+                            <span class="exp-tag">Pelayanan Pelanggan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. PENGALAMAN ORGANISASI -->
+                <div class="exp-category-group" data-category="org">
+                    <h3 class="exp-category-title">Pengalaman Organisasi</h3>
+
+                    <div class="exp-grid-two">
+                        <!-- INVERS -->
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Staf Departemen INVERS</h3>
+                                    <h4 class="exp-org">HIMATIKA UIN Jakarta</h4>
+                                </div>
+                                <div style="display: flex; gap: 6px;">
+                                    <span class="mono-badge badge-cyan">2026 – Sekarang</span>
+                                    <span class="mono-badge badge-indigo">Organisasi</span>
+                                </div>
+                            </div>
+
+                            <ul class="exp-list">
+                                <li>Menangani kegiatan advokasi mahasiswa dan mengelola Ruang Aspirasi Mahasiswa untuk menghimpun serta menindaklanjuti aspirasi dan permasalahan mahasiswa.</li>
+                                <li>Membantu proses advokasi administratif mahasiswa, termasuk pengajuan banding UKT bagi mahasiswa baru.</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span class="exp-tag">Advokasi Mahasiswa</span>
+                                <span class="exp-tag">Administrasi</span>
+                                <span class="exp-tag">Komunikasi</span>
+                            </div>
+                        </div>
+
+                        <!-- RASIO -->
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Staf Departemen RASIO</h3>
+                                    <h4 class="exp-org">HIMATIKA UIN Jakarta</h4>
+                                </div>
+                                <div style="display: flex; gap: 6px;">
+                                    <span class="mono-badge badge-cyan">2025 – 2026</span>
+                                    <span class="mono-badge badge-indigo">Organisasi</span>
+                                </div>
+                            </div>
+
+                            <ul class="exp-list">
+                                <li>Bertugas sebagai Penanggung Jawab (PIC) HIMATIKA Esports.</li>
+                                <li>Mengoordinasikan dan mendukung pelaksanaan program serta kegiatan esports HIMATIKA.</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span class="exp-tag">Koordinasi</span>
+                                <span class="exp-tag">Kerja Sama Tim</span>
+                                <span class="exp-tag">Pelaksanaan Kegiatan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PENGALAMAN KEPANITIAAN -->
+                <div class="exp-category-group" data-category="committee">
+                    <h3 class="exp-category-title">Pengalaman Kepanitiaan</h3>
+
+                    <div class="exp-grid-two">
+                        <!-- HIMATIKA MENGAJAR GEN 6 -->
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Ketua Pelaksana</h3>
+                                    <h4 class="exp-org">HIMATIKA Mengajar Gen 6</h4>
+                                    <p class="exp-location">HIMATIKA UIN Jakarta</p>
+                                </div>
+                                <span class="mono-badge badge-cyan">Mei – Agustus 2026</span>
+                            </div>
+
+                            <ul class="exp-list">
+                                <li>Memimpin keseluruhan proses perencanaan dan pelaksanaan program serta mengoordinasikan divisi, anggota kepanitiaan, dan pihak terkait.</li>
+                                <li>Memantau pelaksanaan kegiatan dan memastikan kebutuhan setiap divisi dapat terpenuhi.</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span class="exp-tag">Kepemimpinan</span>
+                                <span class="exp-tag">Manajemen Program</span>
+                                <span class="exp-tag">Koordinasi</span>
+                            </div>
+                        </div>
+
+                        <!-- MUSYAKA 2026 -->
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Ketua Pelaksana</h3>
+                                    <h4 class="exp-org">MUSYAKA 2026</h4>
+                                    <p class="exp-location">HIMATIKA UIN Jakarta</p>
+                                </div>
+                                <span class="mono-badge badge-cyan">Februari – April 2026</span>
+                            </div>
+
+                            <ul class="exp-list">
+                                <li>Memimpin keseluruhan proses perencanaan dan pelaksanaan kegiatan serta mengoordinasikan divisi, anggota kepanitiaan, dan pihak terkait.</li>
+                                <li>Memantau pelaksanaan kegiatan dan memastikan kebutuhan operasional setiap divisi terpenuhi dengan baik.</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span class="exp-tag">Kepemimpinan</span>
+                                <span class="exp-tag">Manajemen Kegiatan</span>
+                                <span class="exp-tag">Koordinasi</span>
+                            </div>
+                        </div>
+
+                        <!-- TEOREMA 15 -->
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Kepala Divisi Lapangan / Koordinator Lapangan</h3>
+                                    <h4 class="exp-org">Teorema 15</h4>
+                                    <p class="exp-location">HIMATIKA UIN Jakarta</p>
+                                </div>
+                                <span class="mono-badge badge-cyan">Agustus – November 2026</span>
+                            </div>
+
+                            <ul class="exp-list">
+                                <li>Mengoordinasikan operasional lapangan, kebutuhan logistik kegiatan, dan personel lapangan.</li>
+                                <li>Mencari serta mengatur lokasi kegiatan dan akomodasi peserta.</li>
+                                <li>Menyusun pembagian kamar, peta vila, dan tata letak akomodasi.</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span class="exp-tag">Operasional Lapangan</span>
+                                <span class="exp-tag">Logistik</span>
+                                <span class="exp-tag">Koordinasi</span>
+                            </div>
+                        </div>
+
+                        <!-- TEOREMA 14 -->
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Kepala Divisi Lapangan</h3>
+                                    <h4 class="exp-org">Teorema 14</h4>
+                                    <p class="exp-location">HIMATIKA UIN Jakarta</p>
+                                </div>
+                                <span class="mono-badge badge-cyan">Agustus – November 2025</span>
+                            </div>
+
+                            <ul class="exp-list">
+                                <li>Mengoordinasikan operasional lapangan dan anggota divisi lapangan.</li>
+                                <li>Mengatur kebutuhan lokasi kegiatan dan akomodasi peserta.</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span class="exp-tag">Operasional Lapangan</span>
+                                <span class="exp-tag">Koordinasi Tim</span>
+                            </div>
+                        </div>
+
+                        <!-- PBAK 2025 -->
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Kepala Divisi Logistik</h3>
+                                    <h4 class="exp-org">PBAK Jurusan Matematika 2025</h4>
+                                    <p class="exp-location">HIMATIKA UIN Jakarta</p>
+                                </div>
+                                <span class="mono-badge badge-cyan">Juni – Agustus 2025</span>
+                            </div>
+
+                            <ul class="exp-list">
+                                <li>Mengelola kebutuhan logistik kegiatan dan pendistribusian perlengkapan operasional.</li>
+                                <li>Mengatur persediaan perlengkapan operasional untuk memastikan kebutuhan kegiatan terpenuhi.</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span class="exp-tag">Manajemen Logistik</span>
+                                <span class="exp-tag">Operasional</span>
+                            </div>
+                        </div>
+
+                        <!-- HIMATIKA MENGAJAR GEN 5 -->
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-title">Staf Hubungan Masyarakat</h3>
+                                    <h4 class="exp-org">HIMATIKA Mengajar Gen 5</h4>
+                                    <p class="exp-location">HIMATIKA UIN Jakarta</p>
+                                </div>
+                                <span class="mono-badge badge-cyan">Juni – Agustus 2025</span>
+                            </div>
+
+                            <ul class="exp-list">
+                                <li>Membantu komunikasi dan penyampaian informasi kepada peserta serta pihak terkait.</li>
+                                <li>Berkontribusi dalam mendukung kelancaran pelaksanaan kegiatan.</li>
+                            </ul>
+
+                            <div class="exp-tags">
+                                <span class="exp-tag">Komunikasi</span>
+                                <span class="exp-tag">Hubungan Masyarakat</span>
+                                <span class="exp-tag">Kerja Sama Tim</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS SECTION ==================== -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">TECHNICAL & PROFESSIONAL TOOLKIT</span>
+                    <h2>Skills & Kompetensi</h2>
+                    <p>Kemampuan teknis, analitis, dan manajerial yang diasah melalui perkuliahan matematika, proyek data, dan pengalaman kerja operasional.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programming & Analytics -->
+                    <div class="skill-bento-card">
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap">⌨</div>
+                            <h3>Programming & Analytics</h3>
+                        </div>
+                        <p class="skill-card-desc">
+                            Pemrograman komputasi dan analisis data untuk mengolah, memodelkan, serta mengekstraksi wawasan dari data.
+                        </p>
+                        <div class="skill-tags-group">
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">R</span>
+                            <span class="skill-pill">Data Analysis</span>
+                            <span class="skill-pill">Exploratory Data Analysis (EDA)</span>
+                            <span class="skill-pill">Statistical Analysis</span>
+                            <span class="skill-pill">Statistical Modeling</span>
+                            <span class="skill-pill">Regression Analysis</span>
+                            <span class="skill-pill">Hypothesis Testing</span>
+                            <span class="skill-pill">Machine Learning (Logistic Regression)</span>
+                        </div>
                     </div>
 
-                    <div class="education-detail-item">
-                        <span>Peminatan</span>
-                        <strong>Data Science</strong>
+                    <!-- Tools & Visualization -->
+                    <div class="skill-bento-card">
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap">▦</div>
+                            <h3>Tools & Visualization</h3>
+                        </div>
+                        <p class="skill-card-desc">
+                            Perangkat lunak dan pustaka untuk pembersihan data, eksplorasi grafis, dan pengembangan dashboard.
+                        </p>
+                        <div class="skill-tags-group">
+                            <span class="skill-pill">Microsoft Excel</span>
+                            <span class="skill-pill">Google Colab</span>
+                            <span class="skill-pill">NetworkX</span>
+                            <span class="skill-pill">Matplotlib</span>
+                            <span class="skill-pill">Data Visualization</span>
+                            <span class="skill-pill">Dashboard Development</span>
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="education-focus">
-
-                    <h4>Fokus Akademik</h4>
-
-                    <p>
-                        Matematika, analisis data,
-                        statistika, pemodelan matematis,
-                        dan komputasi statistik.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     EXPERIENCE SECTION
-========================= -->
-
-<section id="experience" class="experience-section">
-
-    <div class="section-heading">
-        <span class="section-label">PERJALANAN PROFESIONAL SAYA</span>
-        <h2>Pengalaman</h2>
-        <p>
-            Pengalaman kerja, organisasi, dan kontribusi
-            saya dalam berbagai kegiatan.
-        </p>
-    </div>
-
-
-    <!-- 1. PENGALAMAN KERJA -->
-
-    <div class="experience-category">
-
-        <h3 class="category-title">Pengalaman Kerja</h3>
-
-        <div class="experience-card work-card">
-
-            <div class="experience-top">
-                <span class="experience-date">
-                    Desember 2025 – Sekarang
-                </span>
-
-                <span class="experience-type">
-                    Profesional
-                </span>
-            </div>
-
-            <h3>Staf Administrasi dan Operasional</h3>
-
-            <h4>CV Panji Jaya Abadi</h4>
-
-            <p class="experience-location">
-                Tangerang Selatan, Indonesia
-            </p>
-
-            <ul>
-                <li>
-                    Mencatat transaksi harian, setoran, dan data
-                    operasional, termasuk berat ayam serta data
-                    pengiriman dari pengemudi.
-                </li>
-
-                <li>
-                    Menyiapkan bon pelanggan dan memberikan
-                    dukungan pelayanan kepada pelanggan.
-                </li>
-
-                <li>
-                    Mendukung pelaksanaan kegiatan administrasi
-                    dan operasional sehari-hari.
-                </li>
-            </ul>
-
-            <div class="experience-tags">
-                <span>Administrasi</span>
-                <span>Operasional</span>
-                <span>Pencatatan Data</span>
-                <span>Pelayanan Pelanggan</span>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- 2. PENGALAMAN ORGANISASI -->
-
-    <div class="experience-category">
-
-        <h3 class="category-title">
-            Pengalaman Organisasi
-        </h3>
-
-        <div class="experience-grid">
-
-
-            <!-- INVERS -->
-
-            <div class="experience-card">
-
-                <div class="experience-top">
-                    <span class="experience-date">
-                        2026 – Sekarang
-                    </span>
-
-                    <span class="experience-type">
-                        Organisasi
-                    </span>
-                </div>
-
-                <h3>Staf Departemen INVERS</h3>
-
-                <h4>HIMATIKA UIN Jakarta</h4>
-
-                <ul>
-                    <li>
-                        Menangani kegiatan advokasi mahasiswa dan
-                        mengelola Ruang Aspirasi Mahasiswa untuk
-                        menghimpun serta menindaklanjuti aspirasi
-                        dan permasalahan mahasiswa.
-                    </li>
-
-                    <li>
-                        Membantu proses advokasi administratif
-                        mahasiswa, termasuk pengajuan banding UKT
-                        bagi mahasiswa baru.
-                    </li>
-                </ul>
-
-                <div class="experience-tags">
-                    <span>Advokasi Mahasiswa</span>
-                    <span>Administrasi</span>
-                    <span>Komunikasi</span>
-                </div>
-
-            </div>
-
-
-            <!-- RASIO -->
-
-            <div class="experience-card">
-
-                <div class="experience-top">
-                    <span class="experience-date">
-                        2025 – 2026
-                    </span>
-
-                    <span class="experience-type">
-                        Organisasi
-                    </span>
-                </div>
-
-                <h3>Staf Departemen RASIO</h3>
-
-                <h4>HIMATIKA UIN Jakarta</h4>
-
-                <ul>
-                    <li>
-                        Bertugas sebagai Penanggung Jawab (PIC)
-                        HIMATIKA Esports.
-                    </li>
-
-                    <li>
-                        Mengoordinasikan dan mendukung pelaksanaan
-                        program serta kegiatan esports HIMATIKA.
-                    </li>
-                </ul>
-
-                <div class="experience-tags">
-                    <span>Koordinasi</span>
-                    <span>Kerja Sama Tim</span>
-                    <span>Pelaksanaan Kegiatan</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- 3. PENGALAMAN KEPANITIAAN -->
-
-    <div class="experience-category">
-
-        <h3 class="category-title">
-            Pengalaman Kepanitiaan
-        </h3>
-
-        <div class="experience-grid">
-
-
-            <!-- HIMATIKA MENGAJAR GEN 6 -->
-
-            <div class="experience-card">
-
-                <div class="experience-top">
-                    <span class="experience-date">
-                        Mei – Agustus 2026
-                    </span>
-
-                    <span class="experience-type">
-                        Kepemimpinan
-                    </span>
-                </div>
-
-                <h3>Ketua Pelaksana</h3>
-
-                <h4>HIMATIKA Mengajar Gen 6</h4>
-
-                <p class="experience-location">
-                    HIMATIKA UIN Jakarta
-                </p>
-
-                <ul>
-                    <li>
-                        Memimpin keseluruhan proses perencanaan
-                        dan pelaksanaan program serta
-                        mengoordinasikan divisi, anggota
-                        kepanitiaan, dan pihak terkait.
-                    </li>
-
-                    <li>
-                        Memantau pelaksanaan kegiatan dan
-                        memastikan kebutuhan setiap divisi
-                        dapat terpenuhi.
-                    </li>
-                </ul>
-
-                <div class="experience-tags">
-                    <span>Kepemimpinan</span>
-                    <span>Manajemen Program</span>
-                    <span>Koordinasi</span>
-                </div>
-
-            </div>
-
-
-            <!-- MUSYAKA -->
-
-            <div class="experience-card">
-
-                <div class="experience-top">
-                    <span class="experience-date">
-                        Februari – April 2026
-                    </span>
-
-                    <span class="experience-type">
-                        Kepemimpinan
-                    </span>
-                </div>
-
-                <h3>Ketua Pelaksana</h3>
-
-                <h4>MUSYAKA 2026</h4>
-
-                <p class="experience-location">
-                    HIMATIKA UIN Jakarta
-                </p>
-
-                <ul>
-                    <li>
-                        Memimpin keseluruhan proses perencanaan
-                        dan pelaksanaan kegiatan serta
-                        mengoordinasikan divisi, anggota
-                        kepanitiaan, dan pihak terkait.
-                    </li>
-
-                    <li>
-                        Memantau pelaksanaan kegiatan dan
-                        memastikan kebutuhan setiap divisi
-                        dapat terpenuhi.
-                    </li>
-                </ul>
-
-                <div class="experience-tags">
-                    <span>Kepemimpinan</span>
-                    <span>Manajemen Kegiatan</span>
-                    <span>Koordinasi</span>
-                </div>
-
-            </div>
-
-
-            <!-- TEOREMA 15 -->
-
-            <div class="experience-card">
-
-                <div class="experience-top">
-                    <span class="experience-date">
-                        Agustus – November 2026
-                    </span>
-
-                    <span class="experience-type">
-                        Operasional
-                    </span>
-                </div>
-
-                <h3>Kepala Divisi Lapangan / Koordinator Lapangan</h3>
-
-                <h4>Teorema 15</h4>
-
-                <p class="experience-location">
-                    HIMATIKA UIN Jakarta
-                </p>
-
-                <ul>
-                    <li>
-                        Mengoordinasikan operasional lapangan,
-                        kebutuhan kegiatan, dan personel lapangan.
-                    </li>
-
-                    <li>
-                        Mencari serta mengatur lokasi kegiatan
-                        dan akomodasi peserta.
-                    </li>
-
-                    <li>
-                        Menyusun pembagian kamar, peta vila,
-                        dan tata letak akomodasi.
-                    </li>
-                </ul>
-
-                <div class="experience-tags">
-                    <span>Operasional Lapangan</span>
-                    <span>Logistik</span>
-                    <span>Koordinasi</span>
-                </div>
-
-            </div>
-
-
-            <!-- TEOREMA 14 -->
-
-            <div class="experience-card">
-
-                <div class="experience-top">
-                    <span class="experience-date">
-                        Agustus – November 2025
-                    </span>
-
-                    <span class="experience-type">
-                        Operasional
-                    </span>
-                </div>
-
-                <h3>Kepala Divisi Lapangan</h3>
-
-                <h4>Teorema 14</h4>
-
-                <p class="experience-location">
-                    HIMATIKA UIN Jakarta
-                </p>
-
-                <ul>
-                    <li>
-                        Mengoordinasikan operasional lapangan
-                        dan anggota divisi lapangan.
-                    </li>
-
-                    <li>
-                        Mengatur kebutuhan lokasi kegiatan
-                        dan akomodasi peserta.
-                    </li>
-                </ul>
-
-                <div class="experience-tags">
-                    <span>Operasional Lapangan</span>
-                    <span>Koordinasi Tim</span>
-                </div>
-
-            </div>
-
-
-            <!-- PBAK -->
-
-            <div class="experience-card">
-
-                <div class="experience-top">
-                    <span class="experience-date">
-                        Juni – Agustus 2025
-                    </span>
-
-                    <span class="experience-type">
-                        Logistik
-                    </span>
-                </div>
-
-                <h3>Kepala Divisi Logistik</h3>
-
-                <h4>PBAK Jurusan Matematika 2025</h4>
-
-                <p class="experience-location">
-                    HIMATIKA UIN Jakarta
-                </p>
-
-                <ul>
-                    <li>
-                        Mengelola kebutuhan logistik kegiatan
-                        dan pendistribusian perlengkapan.
-                    </li>
-
-                    <li>
-                        Mengatur persediaan perlengkapan
-                        operasional untuk memastikan kebutuhan
-                        kegiatan terpenuhi.
-                    </li>
-                </ul>
-
-                <div class="experience-tags">
-                    <span>Manajemen Logistik</span>
-                    <span>Operasional</span>
-                </div>
-
-            </div>
-
-
-            <!-- HIMATIKA MENGAJAR GEN 5 -->
-
-            <div class="experience-card">
-
-                <div class="experience-top">
-                    <span class="experience-date">
-                        Juni – Agustus 2025
-                    </span>
-
-                    <span class="experience-type">
-                        Hubungan Masyarakat
-                    </span>
-                </div>
-
-                <h3>Staf Hubungan Masyarakat</h3>
-
-                <h4>HIMATIKA Mengajar Gen 5</h4>
-
-                <p class="experience-location">
-                    HIMATIKA UIN Jakarta
-                </p>
-
-                <ul>
-                    <li>
-                        Membantu komunikasi dan penyampaian
-                        informasi kepada peserta serta pihak terkait.
-                    </li>
-
-                    <li>
-                        Berkontribusi dalam mendukung
-                        pelaksanaan kegiatan.
-                    </li>
-                </ul>
-
-                <div class="experience-tags">
-                    <span>Komunikasi</span>
-                    <span>Hubungan Masyarakat</span>
-                    <span>Kerja Sama Tim</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==================== SKILLS SECTION ==================== -->
-<section id="skills" class="skills-section">
-    <div class="skills-container">
-
-        <div class="section-heading">
-            <span class="section-label">KEMAMPUAN DAN KOMPETENSI</span>
-            <h2>Skills & Kompetensi</h2>
-            <p>
-                Kemampuan teknis dan profesional yang saya kembangkan
-                melalui perkuliahan, proyek akademik, dan pengalaman organisasi.
-            </p>
-        </div>
-
-        <div class="skills-grid">
-
-            <!-- Programming & Analytics -->
-            <div class="skill-card">
-                <div class="skill-icon">⌨</div>
-                <h3>Programming & Analytics</h3>
-                <p class="skill-description">
-                    Kemampuan pemrograman dan analisis data untuk
-                    mengolah serta memperoleh informasi dari data.
-                </p>
-
-                <div class="skill-tags">
-                    <span>Python</span>
-                    <span>R</span>
-                    <span>Data Analysis</span>
-                    <span>Exploratory Data Analysis (EDA)</span>
-                    <span>Statistical Analysis</span>
-                    <span>Statistical Modeling</span>
-                    <span>Regression Analysis</span>
-                    <span>Hypothesis Testing</span>
-                    <span>Machine Learning (Logistic Regression)</span>
+                    <!-- Professional Skills -->
+                    <div class="skill-bento-card">
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap">✦</div>
+                            <h3>Professional Skills</h3>
+                        </div>
+                        <p class="skill-card-desc">
+                            Kompetensi manajerial, kepemimpinan tim, dan koordinasi yang dikembangkan dari pengalaman kerja dan kepanitiaan.
+                        </p>
+                        <div class="skill-tags-group">
+                            <span class="skill-pill">Leadership</span>
+                            <span class="skill-pill">Communication</span>
+                            <span class="skill-pill">Teamwork</span>
+                            <span class="skill-pill">Public Speaking</span>
+                            <span class="skill-pill">Problem Solving</span>
+                            <span class="skill-pill">Event Management</span>
+                            <span class="skill-pill">Administration</span>
+                            <span class="skill-pill">Operations</span>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="skill-bento-card">
+                        <div class="skill-card-head">
+                            <div class="skill-icon-wrap">文</div>
+                            <h3>Languages</h3>
+                        </div>
+                        <p class="skill-card-desc">
+                            Kemampuan bahasa komunikasi untuk keperluan akademik, penulisan riset teknis, dan interaksi profesional.
+                        </p>
+                        <div class="lang-stack">
+                            <div class="lang-item">
+                                <div>
+                                    <h4>Bahasa Indonesia</h4>
+                                    <span class="lang-item-sub">Native</span>
+                                </div>
+                                <span class="lang-level">Bahasa Ibu</span>
+                            </div>
+                            <div class="lang-item">
+                                <div>
+                                    <h4>English</h4>
+                                    <span class="lang-item-sub">Intermediate</span>
+                                </div>
+                                <span class="lang-level">Menengah (Komunikasi & Riset)</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Tools & Visualization -->
-            <div class="skill-card">
-                <div class="skill-icon">▦</div>
-                <h3>Tools & Visualization</h3>
-                <p class="skill-description">
-                    Perangkat dan teknologi yang digunakan untuk
-                    pengolahan data, visualisasi, dan pengembangan dashboard.
-                </p>
-
-                <div class="skill-tags">
-                    <span>Microsoft Excel</span>
-                    <span>Google Colab</span>
-                    <span>NetworkX</span>
-                    <span>Matplotlib</span>
-                    <span>Data Visualization</span>
-                    <span>Dashboard Development</span>
+        <!-- ==================== PROJECTS SECTION ==================== -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">CASE STUDIES & APPLIED SCIENCE</span>
+                    <h2>Projects & Case Studies</h2>
+                    <p>Penerapan konsep matematika terapan, statistika inferensial, pemodelan data, dan algoritma komputasi dalam memecahkan masalah riil.</p>
                 </div>
-            </div>
 
-            <!-- Professional Skills -->
-            <div class="skill-card">
-                <div class="skill-icon">✦</div>
-                <h3>Professional Skills</h3>
-                <p class="skill-description">
-                    Kemampuan interpersonal dan manajerial yang
-                    dikembangkan melalui pengalaman kerja dan organisasi.
-                </p>
+                <div class="projects-bento-grid">
 
-                <div class="skill-tags">
-                    <span>Leadership</span>
-                    <span>Communication</span>
-                    <span>Teamwork</span>
-                    <span>Public Speaking</span>
-                    <span>Problem Solving</span>
-                    <span>Event Management</span>
-                    <span>Administration</span>
-                    <span>Operations</span>
-                </div>
-            </div>
+                    <!-- FEATURED PROJECT 1: FLIGHT PERFORMANCE ANALYSIS & DASHBOARD -->
+                    <div class="project-bento-card project-card-featured">
+                        <span class="project-featured-badge">FEATURED CASE STUDY</span>
 
-            <!-- Languages -->
-            <div class="skill-card">
-                <div class="skill-icon">文</div>
-                <h3>Languages</h3>
-                <p class="skill-description">
-                    Kemampuan bahasa yang digunakan dalam komunikasi
-                    akademik maupun profesional.
-                </p>
-
-                <div class="language-list">
-                    <div class="language-item">
                         <div>
-                            <h4>Bahasa Indonesia</h4>
-                            <span>Native</span>
+                            <div class="project-top-meta">
+                                <span class="mono-badge badge-cyan">Data Analysis &amp; EDA</span>
+                                <span class="mono-badge badge-indigo">Tahun 2013 • BTS Dataset</span>
+                            </div>
+
+                            <h3>Flight Performance Analysis &amp; Dashboard — NYC Airports</h3>
+
+                            <p class="project-summary">
+                                Menganalisis secara mendalam <strong>327.346 data penerbangan komersial tahun 2013</strong> (Bureau of Transportation Statistics) pada tiga bandara tersibuk metropolitan New York: Newark Liberty (EWR), John F. Kennedy (JFK), dan LaGuardia (LGA) untuk memetakan dinamika operasional, performa ketepatan waktu, dan efisiensi maskapai.
+                            </p>
+
+                            <!-- Structured Authentic Dashboard Visual Frame -->
+                            <div class="case-study-visual-frame">
+                                <div class="visual-frame-header">
+                                    <div class="window-dots">
+                                        <div class="window-dot" style="background: #ef4444;"></div>
+                                        <div class="window-dot" style="background: #f59e0b;"></div>
+                                        <div class="window-dot" style="background: #10b981;"></div>
+                                    </div>
+                                    <span class="visual-frame-title">NYC Flight Performance Analytics Dashboard</span>
+                                    <span class="mono-badge badge-cyan" style="font-size: 9.5px; padding: 2px 8px;">Terverifikasi Excel &amp; PDF</span>
+                                </div>
+
+                                <div class="flight-dashboard-preview">
+                                    <!-- High-impact Stat Triad -->
+                                    <div class="flight-stats-triad">
+                                        <div class="flight-stat-card">
+                                            <span class="flight-stat-val">327,346</span>
+                                            <span class="flight-stat-desc">Total Observasi Penerbangan</span>
+                                        </div>
+                                        <div class="flight-stat-card">
+                                            <span class="flight-stat-val" style="color: #f59e0b;">39.02%</span>
+                                            <span class="flight-stat-desc">Tingkat Delay Keberangkatan</span>
+                                        </div>
+                                        <div class="flight-stat-card">
+                                            <span class="flight-stat-val">12.56 mnt</span>
+                                            <span class="flight-stat-desc">Rata-rata Delay Berangkat</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Comparative Airport Breakdown (Terverifikasi Primer) -->
+                                    <div class="flight-airport-bars">
+                                        <div class="airport-bar-row">
+                                            <span class="airport-code">EWR</span>
+                                            <div class="bar-track">
+                                                <div class="bar-fill" style="width: 35.8%;"></div>
+                                            </div>
+                                            <span class="airport-pct">35.8%</span>
+                                            <span class="airport-count" style="font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); width: 80px; text-align: right;">117,127 fl</span>
+                                        </div>
+                                        <div class="airport-bar-row">
+                                            <span class="airport-code">JFK</span>
+                                            <div class="bar-track">
+                                                <div class="bar-fill" style="width: 33.3%;"></div>
+                                            </div>
+                                            <span class="airport-pct">33.3%</span>
+                                            <span class="airport-count" style="font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); width: 80px; text-align: right;">109,079 fl</span>
+                                        </div>
+                                        <div class="airport-bar-row">
+                                            <span class="airport-code">LGA</span>
+                                            <div class="bar-track">
+                                                <div class="bar-fill" style="width: 30.9%;"></div>
+                                            </div>
+                                            <span class="airport-pct">30.9%</span>
+                                            <span class="airport-count" style="font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); width: 80px; text-align: right;">101,140 fl</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Additional Operational Metrics Grid -->
+                                    <div class="flight-sub-metrics">
+                                        <div class="sub-metric-pill">
+                                            <span>Rata-rata Delay Tiba</span>
+                                            <strong>6.90 menit</strong>
+                                        </div>
+                                        <div class="sub-metric-pill">
+                                            <span>On-Time Dep. Rate</span>
+                                            <strong style="color: #10b981;">60.98%</strong>
+                                        </div>
+                                        <div class="sub-metric-pill">
+                                            <span>Rata-rata Jarak Tempuh</span>
+                                            <strong>1,048.37 mil</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-specs">
+                                <div class="spec-item">
+                                    <h4>Ruang Lingkup &amp; Temuan Maskapai</h4>
+                                    <p>Analisis volume penerbangan, pola delay temporal, serta komparasi maskapai: <strong>US Airways</strong> mencatat delay rate terendah (27.27%), sedangkan <strong>Frontier Airlines</strong> mencatat delay rate tertinggi (54.51%). Maskapai volume terbesar: United Airlines (57.782), JetBlue (54.089), dan ExpressJet (51.108).</p>
+                                </div>
+
+                                <div class="spec-item">
+                                    <h4>Tools &amp; Stack</h4>
+                                    <div class="exp-tags" style="margin-top: 4px; padding-top: 0; border: none;">
+                                        <span class="exp-tag">Python</span>
+                                        <span class="exp-tag">Pandas</span>
+                                        <span class="exp-tag">Exploratory Data Analysis</span>
+                                        <span class="exp-tag">Matplotlib / Seaborn</span>
+                                        <span class="exp-tag">Excel Analytics</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <span class="language-level">Bahasa Ibu</span>
+
+                        <div class="project-result-spotlight">
+                            <strong>Temuan Utama (Key Finding)</strong>
+                            <p>Dari total 327.346 penerbangan 2013, sebanyak 39,02% mengalami keterlambatan keberangkatan. EWR mendominasi volume (35,8%), disusul JFK (33,3%) dan LGA (30,9%), dengan rute terpadat menuju Atlanta (ATL: 16.837 penerbangan) dan Chicago (ORD: 16.566 penerbangan).</p>
+                        </div>
+
+                        <div class="project-footer-actions">
+                            <a href="https://github.com/muhammadabidwijiyanto-ops/PROJEK-ANALIS-DATA-EKSPLORASI" target="_blank" rel="noopener noreferrer" class="project-repo-link">
+                                <span>Lihat Repository Proyek di GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="language-item">
+                    <!-- FEATURED PROJECT 2: SMART COURIER ROUTE RECOMMENDATION SYSTEM -->
+                    <div class="project-bento-card project-card-featured">
+                        <span class="project-featured-badge">ALGORITHMIC GRAPH MODEL</span>
+
                         <div>
-                            <h4>English</h4>
-                            <span>Intermediate</span>
+                            <div class="project-top-meta">
+                                <span class="mono-badge badge-cyan">Algorithms &amp; Computing</span>
+                                <span class="mono-badge badge-indigo">15 Nodes • 19 Edges • 63 km</span>
+                            </div>
+
+                            <h3>Smart Courier Route Recommendation System</h3>
+
+                            <p class="project-summary">
+                                Mengembangkan sistem optimasi rute logistik berbasis <strong>Teori Graf Berbobot (Weighted Graph)</strong> dengan 15 lokasi dan 19 ruas jalan (total bobot 63 km) untuk menemukan jalur pengantaran tercepat dan paling efisien.
+                            </p>
+
+                            <!-- High-Precision SVG Graph Visualization -->
+                            <div class="case-study-visual-frame">
+                                <div class="visual-frame-header">
+                                    <div class="window-dots">
+                                        <div class="window-dot" style="background: #ef4444;"></div>
+                                        <div class="window-dot" style="background: #f59e0b;"></div>
+                                        <div class="window-dot" style="background: #10b981;"></div>
+                                    </div>
+                                    <span class="visual-frame-title">Authentic Graph Topology: 15 Nodes, 19 Edges &amp; Shortest Path</span>
+                                    <span class="mono-badge badge-cyan" style="font-size: 9.5px; padding: 2px 8px;">NetworkX Visual</span>
+                                </div>
+
+                                <div class="graph-visual-canvas">
+                                    <div class="graph-svg-container">
+                                        <svg viewBox="0 0 680 270" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
+                                            <!-- Standard Unselected Road Edges (15 Edges) -->
+                                            <line x1="50" y1="135" x2="135" y2="70" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="135" y1="70" x2="230" y2="40" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="135" y1="70" x2="230" y2="100" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="230" y1="40" x2="320" y2="55" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="230" y1="100" x2="320" y2="55" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="230" y1="100" x2="400" y2="90" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="320" y1="55" x2="400" y2="90" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="320" y1="55" x2="495" y2="110" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="400" y1="90" x2="465" y2="55" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="465" y1="55" x2="495" y2="110" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="495" y1="110" x2="575" y2="120" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="575" y1="120" x2="610" y2="195" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="150" y1="205" x2="340" y2="245" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="340" y1="245" x2="430" y2="205" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+                                            <line x1="430" y1="205" x2="505" y2="250" stroke="rgba(255,255,255,0.18)" stroke-width="1.8"/>
+
+                                            <!-- OPTIMAL PATH EDGES (HIGHLIGHTED CYAN GLOW: Gudang -> B -> F -> L -> M) -->
+                                            <line x1="50" y1="135" x2="150" y2="205" stroke="#38bdf8" stroke-width="3.8" stroke-linecap="round"/>
+                                            <line x1="150" y1="205" x2="270" y2="205" stroke="#38bdf8" stroke-width="3.8" stroke-linecap="round"/>
+                                            <line x1="270" y1="205" x2="430" y2="205" stroke="#38bdf8" stroke-width="3.8" stroke-linecap="round"/>
+                                            <line x1="430" y1="205" x2="610" y2="195" stroke="#38bdf8" stroke-width="3.8" stroke-linecap="round"/>
+
+                                            <!-- Edge Weights Labels -->
+                                            <text x="80" y="94" fill="#94a3b8" font-size="9" font-family="monospace">2km</text>
+                                            <text x="175" y="48" fill="#94a3b8" font-size="9" font-family="monospace">3km</text>
+                                            <text x="170" y="94" fill="#94a3b8" font-size="9" font-family="monospace">5km</text>
+                                            <text x="270" y="42" fill="#94a3b8" font-size="9" font-family="monospace">2km</text>
+                                            <text x="270" y="86" fill="#94a3b8" font-size="9" font-family="monospace">3km</text>
+                                            <text x="310" y="105" fill="#94a3b8" font-size="9" font-family="monospace">5km</text>
+                                            <text x="350" y="68" fill="#94a3b8" font-size="9" font-family="monospace">2km</text>
+                                            <text x="400" y="70" fill="#94a3b8" font-size="9" font-family="monospace">4km</text>
+                                            <text x="425" y="66" fill="#94a3b8" font-size="9" font-family="monospace">3km</text>
+                                            <text x="490" y="78" fill="#94a3b8" font-size="9" font-family="monospace">2km</text>
+                                            <text x="530" y="108" fill="#94a3b8" font-size="9" font-family="monospace">4km</text>
+                                            <text x="600" y="152" fill="#94a3b8" font-size="9" font-family="monospace">3km</text>
+                                            <text x="240" y="240" fill="#94a3b8" font-size="9" font-family="monospace">6km</text>
+                                            <text x="385" y="235" fill="#94a3b8" font-size="9" font-family="monospace">2km</text>
+                                            <text x="475" y="242" fill="#94a3b8" font-size="9" font-family="monospace">5km</text>
+
+                                            <!-- Highlighted Edge Weights (Cyan) -->
+                                            <text x="92" y="185" fill="#38bdf8" font-size="10.5" font-family="monospace" font-weight="bold">4km*</text>
+                                            <text x="205" y="196" fill="#38bdf8" font-size="10.5" font-family="monospace" font-weight="bold">2km*</text>
+                                            <text x="345" y="196" fill="#38bdf8" font-size="10.5" font-family="monospace" font-weight="bold">4km*</text>
+                                            <text x="515" y="192" fill="#38bdf8" font-size="10.5" font-family="monospace" font-weight="bold">2km*</text>
+
+                                            <!-- Unselected Nodes -->
+                                            <circle cx="135" cy="70" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="135" y="74" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">A</text>
+
+                                            <circle cx="230" cy="40" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="230" y="44" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">C</text>
+
+                                            <circle cx="230" cy="100" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="230" y="104" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">D</text>
+
+                                            <circle cx="320" cy="55" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="320" y="59" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">E</text>
+
+                                            <circle cx="400" cy="90" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="400" y="94" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">H</text>
+
+                                            <circle cx="465" cy="55" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="465" y="59" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">I</text>
+
+                                            <circle cx="495" cy="110" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="495" y="114" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">J</text>
+
+                                            <circle cx="575" cy="120" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="575" y="124" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">K</text>
+
+                                            <circle cx="340" cy="245" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="340" y="249" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">G</text>
+
+                                            <circle cx="505" cy="250" r="13" fill="#131c2e" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                            <text x="505" y="254" fill="#cbd5e1" font-size="9.5" font-family="monospace" font-weight="bold" text-anchor="middle">N</text>
+
+                                            <!-- HIGHLIGHTED PATH NODES -->
+                                            <!-- Origin: Gudang -->
+                                            <circle cx="50" cy="135" r="18" fill="#0d131f" stroke="#f59e0b" stroke-width="2.5"/>
+                                            <text x="50" y="139" fill="#f59e0b" font-size="9" font-weight="bold" font-family="monospace" text-anchor="middle">GDG</text>
+
+                                            <!-- Node B -->
+                                            <circle cx="150" cy="205" r="14" fill="#0d131f" stroke="#38bdf8" stroke-width="2.5"/>
+                                            <text x="150" y="209" fill="#38bdf8" font-size="10" font-weight="bold" font-family="monospace" text-anchor="middle">B</text>
+
+                                            <!-- Node F -->
+                                            <circle cx="270" cy="205" r="14" fill="#0d131f" stroke="#38bdf8" stroke-width="2.5"/>
+                                            <text x="270" y="209" fill="#38bdf8" font-size="10" font-weight="bold" font-family="monospace" text-anchor="middle">F</text>
+
+                                            <!-- Node L -->
+                                            <circle cx="430" cy="205" r="14" fill="#0d131f" stroke="#38bdf8" stroke-width="2.5"/>
+                                            <text x="430" y="209" fill="#38bdf8" font-size="10" font-weight="bold" font-family="monospace" text-anchor="middle">L</text>
+
+                                            <!-- Destination: Node M -->
+                                            <circle cx="610" cy="195" r="17" fill="#0d131f" stroke="#10b981" stroke-width="2.5"/>
+                                            <text x="610" y="199" fill="#10b981" font-size="10" font-weight="bold" font-family="monospace" text-anchor="middle">M</text>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Case Study Query & Empirical Benchmark Strip -->
+                                <div style="padding: 0 18px 18px 18px;">
+                                    <div class="graph-query-highlight">
+                                        <div class="graph-query-title">Jalur Optimal (Gudang &rarr; Rumah M):</div>
+                                        <div class="graph-query-path">Gudang &rarr; Rumah B (4km) &rarr; Rumah F (2km) &rarr; Rumah L (4km) &rarr; Rumah M (2km) = <strong>12 km (24 Menit)</strong></div>
+                                    </div>
+
+                                    <div class="graph-benchmark-box">
+                                        <div class="benchmark-card">
+                                            <strong>Dijkstra Algorithm</strong>
+                                            <span class="bench-time">0.0132 ms</span>
+                                            <span class="bench-note">&Omicron;((V + E) log V) &bull; ~40&times; lebih cepat untuk rute instan titik-ke-titik</span>
+                                        </div>
+                                        <div class="benchmark-card">
+                                            <strong>Floyd-Warshall Algorithm</strong>
+                                            <span class="bench-time">0.5275 ms</span>
+                                            <span class="bench-note">&Omicron;(V&sup3;) &bull; Optimal untuk prekomputasi matriks jarak seluruh pasangan lokasi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-specs">
+                                <div class="spec-item">
+                                    <h4>Metodologi Algoritma &amp; Teori Graf</h4>
+                                    <p>Membangun representasi graf berbobot (weighted graph) 15 node dan 19 edge dengan total bobot jaringan 63 km. Menguji akurasi dan runtime komputasi algoritma <strong>Dijkstra</strong> berprioritas heap serta matriks komparasi <strong>Floyd-Warshall</strong> untuk sistem rekomendasi pengiriman.</p>
+                                </div>
+
+                                <div class="spec-item">
+                                    <h4>Tools &amp; Stack</h4>
+                                    <div class="exp-tags" style="margin-top: 4px; padding-top: 0; border: none;">
+                                        <span class="exp-tag">Python</span>
+                                        <span class="exp-tag">NetworkX</span>
+                                        <span class="exp-tag">Matplotlib</span>
+                                        <span class="exp-tag">Graph Theory</span>
+                                        <span class="exp-tag">Algorithm Complexity</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <span class="language-level">Menengah</span>
+
+                        <div class="project-result-spotlight">
+                            <strong>Temuan Utama (Key Finding)</strong>
+                            <p>Kedua algoritma menghasilkan lintasan optimal identik sepanjang 12 km (24 menit). Dijkstra unggul drastis pada efisiensi waktu komputasi tunggal (0,0132 ms), menjadikannya pilihan optimal untuk integrasi rute kurir dinamis real-time.</p>
+                        </div>
+
+                        <div class="project-footer-actions">
+                            <a href="https://github.com/muhammadabidwijiyanto-ops/PROJEK-ALGORITMA-DAN-STRUKTUR-DATA" target="_blank" rel="noopener noreferrer" class="project-repo-link">
+                                <span>Lihat Repository Proyek di GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- PROJECT 3: EVALUASI HIMATIKA MENGAJAR GEN 5 -->
+                    <div class="project-bento-card">
+                        <div>
+                            <div class="project-top-meta">
+                                <span class="mono-badge badge-cyan">Statistical Analysis</span>
+                                <span class="mono-badge badge-indigo">N = 83 Siswa • SDN Cikoneng</span>
+                            </div>
+
+                            <h3>Evaluasi HIMATIKA Mengajar Generasi 5 (Pre-Test &amp; Post-Test)</h3>
+
+                            <p class="project-summary">
+                                Menganalisis efektivitas pembelajaran matematika terapan pada <strong>83 siswa sekolah dasar (Kelas II–VI)</strong> di SDN Cikoneng, Cisarua, Bogor menggunakan desain <em>One-Group Pretest–Posttest</em> dan uji inferensial non-parametrik.
+                            </p>
+
+                            <!-- Visual Pre-Test vs Post-Test Comparison Box -->
+                            <div class="case-study-visual-frame">
+                                <div class="visual-frame-header">
+                                    <span class="visual-frame-title">Comparative Learning Evaluation (Pre vs Post)</span>
+                                    <span class="mono-badge badge-cyan" style="font-size: 9.5px; padding: 2px 7px;">Wilcoxon p = 0.0053</span>
+                                </div>
+                                <div class="pre-post-visual-box">
+                                    <div class="pre-post-compare-grid">
+                                        <div class="test-compare-col">
+                                            <span class="test-badge-type">Pre-Test Baseline (Mean)</span>
+                                            <span class="test-metric-val">54.94</span>
+                                            <span style="font-size: 10px; color: var(--text-muted); display: block; margin-top: 2px;">Median: 60.00 &bull; SD: 28.52</span>
+                                        </div>
+                                        <div class="test-compare-col" style="border-color: rgba(56, 189, 248, 0.4);">
+                                            <span class="test-badge-type" style="color: #6ee7b7;">Post-Test Outcome (Mean)</span>
+                                            <span class="test-metric-val" style="color: #38bdf8;">68.11</span>
+                                            <span style="font-size: 10px; color: #34d399; display: block; margin-top: 2px;">Mean Gain: +13.17 Poin (Median: 80.00)</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Statistical Significance & Effect Size Strip -->
+                                    <div class="gain-score-strip">
+                                        <span style="color: var(--text-muted); font-size: 11px;">Uji Wilcoxon Signed-Rank: <strong>W = 539.5, p = 0.0053*</strong></span>
+                                        <span>Cohen's d: 0.348 (Kecil) &bull; N-Gain: 0.148</span>
+                                    </div>
+
+                                    <!-- Class-by-Class Dynamics Grid -->
+                                    <div class="class-dynamics-grid">
+                                        <div class="class-dynamic-card">
+                                            <span class="class-title-badge">Kelas II (N=17)</span>
+                                            <span class="class-delta-val positive">+15.88</span>
+                                            <span class="class-stat-note">p=0.0097 &bull; d=0.669</span>
+                                        </div>
+                                        <div class="class-dynamic-card">
+                                            <span class="class-title-badge">Kelas III (N=11)</span>
+                                            <span class="class-delta-val negative">-18.18</span>
+                                            <span class="class-stat-note">p=0.0429 &bull; Evaluasi</span>
+                                        </div>
+                                        <div class="class-dynamic-card">
+                                            <span class="class-title-badge">Kelas IV (N=11)</span>
+                                            <span class="class-delta-val positive">+21.82</span>
+                                            <span class="class-stat-note">p=0.0592 &bull; d=0.642</span>
+                                        </div>
+                                        <div class="class-dynamic-card">
+                                            <span class="class-title-badge">Kelas V (N=19)</span>
+                                            <span class="class-delta-val negative">-11.58</span>
+                                            <span class="class-stat-note">p=0.1021 &bull; Evaluasi</span>
+                                        </div>
+                                        <div class="class-dynamic-card highlight-surge">
+                                            <span class="class-title-badge" style="color: var(--accent-primary); font-weight: bold;">Kelas VI (N=25)</span>
+                                            <span class="class-delta-val positive" style="font-size: 13px;">+40.13</span>
+                                            <span class="class-stat-note" style="color: #38bdf8;">p=0.0003 &bull; d=1.083</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-specs">
+                                <div class="spec-item">
+                                    <h4>Metodologi Statistik Inferensial</h4>
+                                    <p>Uji normalitas Shapiro-Wilk (W = 0.961, p = 0.0063 &lt; 0.05) membuktikan distribusi data tidak normal sehingga digunakan uji non-parametrik <strong>Wilcoxon Signed-Rank Test</strong>. Analisis diperdalam dengan ukuran efek <strong>Cohen's d</strong> dan <strong>Normalized Gain (N-Gain)</strong> per kelas.</p>
+                                </div>
+
+                                <div class="spec-item">
+                                    <h4>Tools &amp; Stack</h4>
+                                    <div class="exp-tags" style="margin-top: 4px; padding-top: 0; border: none;">
+                                        <span class="exp-tag">Python</span>
+                                        <span class="exp-tag">Pingouin</span>
+                                        <span class="exp-tag">SciPy Stats</span>
+                                        <span class="exp-tag">Pandas</span>
+                                        <span class="exp-tag">Google Colab</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-result-spotlight">
+                            <strong>Temuan Utama (Key Finding)</strong>
+                            <p>Program pembelajaran menghasilkan peningkatan yang signifikan secara statistik secara agregat (p = 0,0053). Lonjakan terbesar terjadi pada Kelas VI (+40,13 poin, d = 1,083 [efek besar]) dan Kelas II (+15,88 poin), sekaligus mengidentifikasi perlunya diferensiasi modul untuk Kelas III dan V.</p>
+                        </div>
+
+                        <div class="project-footer-actions">
+                            <a href="https://github.com/muhammadabidwijiyanto-ops/PROJEK-HIMENGxPRRISMA" target="_blank" rel="noopener noreferrer" class="project-repo-link">
+                                <span>Lihat Repository GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 4: ANALISIS FAKTOR KEPUASAN TRANSPORTASI LISTRIK KAMPUS -->
+                    <div class="project-bento-card">
+                        <div>
+                            <div class="project-top-meta">
+                                <span class="mono-badge badge-cyan">Econometrics &amp; Modeling</span>
+                                <span class="mono-badge badge-indigo">N = 134 Responden • UIN Jakarta</span>
+                            </div>
+
+                            <h3>Analisis Faktor Kepuasan Transportasi Listrik Kampus</h3>
+
+                            <p class="project-summary">
+                                Memodelkan determinan kepuasan mahasiswa pengguna transportasi listrik kampus UIN Jakarta melalui <strong>Model Regresi Interaksi &amp; Polinomial Derajat 2 (Model IP2)</strong> berdasarkan 134 responden valid.
+                            </p>
+
+                            <!-- Visual Regression Diagnostics Box -->
+                            <div class="case-study-visual-frame">
+                                <div class="visual-frame-header">
+                                    <span class="visual-frame-title">Best Model IP2 &bull; Adj. R&sup2; = 0.6436 &bull; AIC = 207.87</span>
+                                    <span class="mono-badge badge-cyan" style="font-size: 9.5px; padding: 2px 7px;">ANOVA p = 0.02807</span>
+                                </div>
+                                <div class="regression-visual-box">
+                                    <div class="regression-formula-display">
+                                        Kepuasan = -0.349 - 0.288(Akses) + 0.160(Akses)&sup2; + 0.246(Nyaman) + 1.061(Cepat)* + 0.241(Aman) - 0.294(Kendaraan) - 0.193(Akses&times;Cepat) + &epsilon;
+                                    </div>
+
+                                    <!-- Model Key Coefficients Grid -->
+                                    <div class="reg-coefficients-grid">
+                                        <div class="reg-coef-card dominant">
+                                            <span class="coef-name">Kecepatan Layanan</span>
+                                            <span class="coef-val">&beta; = +1.06107</span>
+                                            <span class="coef-p">p = 0.0004***</span>
+                                        </div>
+                                        <div class="reg-coef-card">
+                                            <span class="coef-name">Kendaraan Pribadi</span>
+                                            <span class="coef-val">&beta; = -0.29416</span>
+                                            <span class="coef-p">p = 0.0014**</span>
+                                        </div>
+                                        <div class="reg-coef-card">
+                                            <span class="coef-name">Kuadrat Akses (Akses&sup2;)</span>
+                                            <span class="coef-val">&beta; = +0.16047</span>
+                                            <span class="coef-p">p = 0.0266*</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Diagnostics & Assumptions Verification -->
+                                    <div class="reg-diag-badges">
+                                        <span class="diag-badge-item">&check; Normalitas (Shapiro-Wilk p = 0.0569)</span>
+                                        <span class="diag-badge-item">&check; Homoskedastisitas (BP p = 0.4039)</span>
+                                        <span class="diag-badge-item">&check; Non-Autokorelasi (DW = 2.0878)</span>
+                                        <span class="diag-badge-item">&check; Multikolinearitas (VIF 1.01–1.52)</span>
+                                        <span class="diag-badge-item" style="background: rgba(56, 189, 248, 0.08); border-color: rgba(56, 189, 248, 0.25); color: #38bdf8;">10-Fold CV: RMSE 0.5068 &bull; R&sup2; 0.6766</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-specs">
+                                <div class="spec-item">
+                                    <h4>Metode Analisis &amp; Pengujian</h4>
+                                    <p>Pembersihan data primer (134 responden valid), seleksi variabel prediktor dengan ANOVA parsial, pemodelan polinomial derajat dua dan efek interaksi, pengujian 4 asumsi klasik Gauss-Markov, serta validasi silang 10-fold cross validation via package <code>caret</code> di R.</p>
+                                </div>
+
+                                <div class="spec-item">
+                                    <h4>Tools &amp; Stack</h4>
+                                    <div class="exp-tags" style="margin-top: 4px; padding-top: 0; border: none;">
+                                        <span class="exp-tag">R Language</span>
+                                        <span class="exp-tag">caret (Cross-Validation)</span>
+                                        <span class="exp-tag">lmtest &amp; car</span>
+                                        <span class="exp-tag">ggplot2</span>
+                                        <span class="exp-tag">Econometric Modeling</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-result-spotlight">
+                            <strong>Temuan Utama (Key Finding)</strong>
+                            <p>Kecepatan layanan merupakan pendorong positif kepuasan paling dominan (&beta; = +1,061, p = 0,0004). Sebaliknya, responden yang memiliki kendaraan pribadi memiliki ekspektasi lebih kritis (&beta; = -0,294, p = 0,0014). Model IP2 menjelaskan 64,36% variansi kepuasan secara valid tanpa pelanggaran asumsi klasik.</p>
+                        </div>
+
+                        <div class="project-footer-actions">
+                            <a href="https://github.com/muhammadabidwijiyanto-ops/PROJEK-MODEL-LINEAR" target="_blank" rel="noopener noreferrer" class="project-repo-link">
+                                <span>Lihat Repository GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+        </section>
 
-        </div>
-    </div>
-</section>
-<!-- ==================== END SKILLS SECTION ==================== -->
-
-<!-- ==================== PROJECTS SECTION ==================== -->
-<section id="projects" class="projects-section">
-    <div class="projects-container">
-
-        <div class="section-heading">
-            <span class="section-label">PORTOFOLIO AKADEMIK</span>
-            <h2>Projects & Case Studies</h2>
-            <p>
-                Beberapa proyek yang saya kerjakan untuk menerapkan
-                konsep matematika, analisis data, statistika, dan
-                komputasi dalam menyelesaikan permasalahan.
-            </p>
-        </div>
-
-        <div class="projects-grid">
-
-            <!-- PROJECT 1 -->
-            <div class="project-card">
-                <div class="project-top">
-                    <span class="project-category">Statistical Analysis</span>
-                    <span class="project-year">2026</span>
+        <!-- ==================== ACHIEVEMENTS & CERTIFICATIONS ==================== -->
+        <section id="achievements" class="achievements-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">RECOGNITION & CREDENTIALS</span>
+                    <h2>Achievements & Certifications</h2>
+                    <p>Validasi kompetensi melalui pencapaian kompetisi ilmiah tingkat nasional serta sertifikasi teknologi industri terstandar.</p>
                 </div>
 
-                <h3>
-                    Evaluasi HIMATIKA Mengajar Generasi 5
-                    Menggunakan Analisis Pre-Test dan Post-Test
-                </h3>
-
-                <p class="project-description">
-                    Menganalisis perubahan hasil belajar 83 siswa
-                    sekolah dasar melalui perbandingan nilai
-                    pre-test dan post-test untuk mengevaluasi
-                    hasil pelaksanaan program pembelajaran.
-                </p>
-
-                <div class="project-details">
-                    <div>
-                        <h4>Metode Analisis</h4>
-                        <p>
-                            Statistik Deskriptif, Shapiro-Wilk,
-                            Paired Sample t-Test, Wilcoxon Signed-Rank,
-                            Cohen's d, dan N-Gain.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4>Tools</h4>
-                        <div class="project-tags">
-                            <span>Google Colab</span>
-                            <span>Statistical Analysis</span>
-                            <span>Python</span>
+                <!-- FEATURED ACHIEVEMENT SPOTLIGHT -->
+                <!-- FEATURED ACHIEVEMENT SPOTLIGHT -->
+                <div class="achievement-spotlight-card">
+                    <div class="achieve-header">
+                        <div class="achieve-badge-wrap">
+                            <span class="trophy-icon">🏆</span>
+                            <span class="mono-badge badge-amber">FINALIS TINGKAT NASIONAL</span>
                         </div>
+                        <span class="mono-badge badge-cyan">2026</span>
                     </div>
-                </div>
 
-                <div class="project-result">
-                    <strong>Fokus Proyek</strong>
-                    <p>
-                        Evaluasi hasil pembelajaran menggunakan
-                        pendekatan statistik inferensial dan
-                        pengukuran efektivitas pembelajaran.
+                    <h3>IPB Mathematics Challenge (IMC) 2026</h3>
+                    <h4 class="achievement-subhead">Infographic Competition — Machine Learning Subtheme</h4>
+
+                    <p class="achieve-desc">
+                        Berpartisipasi dalam kompetisi infografis ilmiah IPB Mathematics Challenge 2026 yang diselenggarakan oleh Gugus Mahasiswa Matematika IPB University sebagai bagian dari <strong>Tim Wani Fit-in Histogram (WFH)</strong>. Berhasil menembus babak finalis nasional melalui karya analisis terapan pemodelan Machine Learning dalam memprediksi risiko keterlambatan penerbangan komersial berdasarkan 6,88 juta data penerbangan.
                     </p>
-                </div>
 
-                <a
-                    href="https://github.com/muhammadabidwijiyanto-ops/PROJEK-HIMENGxPRRISMA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                >
-                    Lihat Repository GitHub <span>↗</span>
-                </a>
-            </div>
-
-            <!-- PROJECT 2 -->
-            <div class="project-card">
-                <div class="project-top">
-                    <span class="project-category">Statistical Modeling</span>
-                    <span class="project-year">2026</span>
-                </div>
-
-                <h3>
-                    Analisis Faktor-Faktor yang Mempengaruhi
-                    Kepuasan Pengguna Transportasi Listrik Kampus
-                </h3>
-
-                <p class="project-description">
-                    Menganalisis faktor-faktor yang berhubungan
-                    dengan kepuasan pengguna layanan transportasi
-                    listrik kampus UIN Syarif Hidayatullah Jakarta
-                    berdasarkan data dari 134 responden.
-                </p>
-
-                <div class="project-details">
-                    <div>
-                        <h4>Metode Analisis</h4>
-                        <p>
-                            Exploratory Data Analysis, Multiple Linear
-                            Regression, seleksi model, pengujian
-                            asumsi klasik, dan evaluasi model.
-                        </p>
+                    <!-- Infographic Work Frame with Direct PDF Link -->
+                    <div class="achieve-poster-frame">
+                        <div class="poster-frame-title">
+                            <span>📊</span>
+                            <span>Karya Infografis: <em>"Sebelum Terlambat: Memprediksi Risiko Delay Penerbangan dengan Machine Learning"</em></span>
+                        </div>
+                        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                            <span class="mono-badge badge-indigo">Tim WFH • ID: IMC26IC32</span>
+                            <a href="assets/poster-imc-2026.pdf" target="_blank" rel="noopener noreferrer" class="poster-action-btn">
+                                <span>Lihat Poster Infografis Resmi (PDF)</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <div>
-                        <h4>Tools</h4>
-                        <div class="project-tags">
-                            <span>R</span>
-                            <span>Regression</span>
-                            <span>Statistical Testing</span>
+                    <!-- Verified Classification Metrics Grid -->
+                    <div class="achieve-metrics-grid">
+                        <div class="achieve-metric-item">
+                            <span class="achieve-metric-val">64.48%</span>
+                            <span class="achieve-metric-name">Recall (Sensitivitas)</span>
+                            <span style="font-size: 10px; color: var(--text-muted); display: block; margin-top: 2px;">Deteksi delay &ge; 15 mnt</span>
+                        </div>
+                        <div class="achieve-metric-item">
+                            <span class="achieve-metric-val">0.6239</span>
+                            <span class="achieve-metric-name">ROC-AUC Score</span>
+                            <span style="font-size: 10px; color: var(--text-muted); display: block; margin-top: 2px;">Kemampuan diskriminasi</span>
+                        </div>
+                        <div class="achieve-metric-item">
+                            <span class="achieve-metric-val">41.13%</span>
+                            <span class="achieve-metric-name">F1-Score</span>
+                            <span style="font-size: 10px; color: var(--text-muted); display: block; margin-top: 2px;">Harmonic mean presisi-recall</span>
+                        </div>
+                        <div class="achieve-metric-item">
+                            <span class="achieve-metric-val">56.24%</span>
+                            <span class="achieve-metric-name">Akurasi Model</span>
+                            <span style="font-size: 10px; color: var(--text-muted); display: block; margin-top: 2px;">Ambang optimal 51.58%</span>
+                        </div>
+                    </div>
+
+                    <div class="achieve-details-grid">
+                        <div class="achieve-info-box">
+                            <strong>Kontribusi Personal Analisis</strong>
+                            <p>Bertanggung jawab penuh pada tahap Exploratory Data Analysis (EDA) skala besar (6,88 juta baris BTS), rekayasa fitur siklik temporal (sin-cos time), dan penerapan model <strong>Logistic Regression dengan teknik class weighting</strong> serta penentuan ambang keputusan optimal 51,58% guna memitigasi class imbalance.</p>
+                        </div>
+
+                        <div class="achieve-info-box">
+                            <strong>Kontekstualisasi &amp; Relevansi Industri</strong>
+                            <p>Hasil pemodelan dikontekstualisasikan untuk membantu otoritas kebandarudaraan dan maskapai dalam memitigasi dampak kerugian operasional delay (mengacu data rata-rata On-Time Performance penerbangan domestik nasional 74,51%).</p>
+                        </div>
+                    </div>
+
+                    <div class="achieve-meta-footer">
+                        <span>Penyelenggara: Gugus Mahasiswa Matematika IPB University • Tim WFH (IMC26IC32)</span>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="assets/poster-imc-2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                Buka Poster PDF ↗
+                            </a>
+                            <a href="https://github.com/muhammadabidwijiyanto-ops/LOMBA-IMC-2026" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                Dokumentasi GitHub ↗
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-result">
-                    <strong>Temuan Utama</strong>
-                    <p>
-                        Kecepatan layanan menjadi salah satu faktor
-                        penting yang berhubungan dengan kepuasan
-                        pengguna transportasi listrik kampus.
-                    </p>
-                </div>
+                <!-- CERTIFICATIONS CREDENTIAL GRID -->
+                <div>
+                    <h3 class="certifications-section-title">Sertifikasi Industri (Huawei ICT Academy)</h3>
 
-                <a
-                    href="https://github.com/muhammadabidwijiyanto-ops/PROJEK-MODEL-LINEAR"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                >
-                    Lihat Repository GitHub <span>↗</span>
-                </a>
-            </div>
+                    <div class="cert-grid">
+                        <!-- CERTIFICATE 1 -->
+                        <div class="cert-card">
+                            <div>
+                                <div class="cert-top-row">
+                                    <span class="cert-icon">📜</span>
+                                    <span class="mono-badge badge-cyan">2026</span>
+                                </div>
+                                <h4>Python Programming Basics</h4>
+                                <p class="cert-issuer">Huawei ICT Academy</p>
+                            </div>
+                            <span class="mono-badge badge-indigo">Programming</span>
+                        </div>
 
-            <!-- PROJECT 3 -->
-            <div class="project-card">
-                <div class="project-top">
-                    <span class="project-category">Algorithms & Computing</span>
-                    <span class="project-year">2026</span>
-                </div>
+                        <!-- CERTIFICATE 2 -->
+                        <div class="cert-card">
+                            <div>
+                                <div class="cert-top-row">
+                                    <span class="cert-icon">☁</span>
+                                    <span class="mono-badge badge-cyan">2026</span>
+                                </div>
+                                <h4>Development and Basic Concepts of Cloud Computing</h4>
+                                <p class="cert-issuer">Huawei ICT Academy</p>
+                            </div>
+                            <span class="mono-badge badge-indigo">Cloud Computing</span>
+                        </div>
 
-                <h3>
-                    Smart Courier Route Recommendation System
-                </h3>
+                        <!-- CERTIFICATE 3 -->
+                        <div class="cert-card">
+                            <div>
+                                <div class="cert-top-row">
+                                    <span class="cert-icon">📊</span>
+                                    <span class="mono-badge badge-cyan">2025</span>
+                                </div>
+                                <h4>HCIA-Big Data V3.5 Course</h4>
+                                <p class="cert-issuer">Huawei ICT Academy</p>
+                            </div>
+                            <span class="mono-badge badge-indigo">Big Data</span>
+                        </div>
 
-                <p class="project-description">
-                    Mengembangkan sistem rekomendasi rute kurir
-                    menggunakan representasi graf berbobot untuk
-                    menentukan jalur perjalanan berdasarkan
-                    jarak antar lokasi.
-                </p>
+                        <!-- CERTIFICATE 4 -->
+                        <div class="cert-card">
+                            <div>
+                                <div class="cert-top-row">
+                                    <span class="cert-icon">🌐</span>
+                                    <span class="mono-badge badge-cyan">2025</span>
+                                </div>
+                                <h4>HCIA-Big Data V3.5 Course (Colombia Training Program)</h4>
+                                <p class="cert-issuer">Huawei ICT Academy</p>
+                            </div>
+                            <span class="mono-badge badge-indigo">Big Data</span>
+                        </div>
 
-                <div class="project-details">
-                    <div>
-                        <h4>Metode</h4>
-                        <p>
-                            Algoritma Dijkstra dan Floyd-Warshall
-                            untuk pencarian jalur terpendek pada
-                            jaringan yang terdiri dari 15 lokasi
-                            dan 19 ruas jalan.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4>Tools</h4>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>NetworkX</span>
-                            <span>Matplotlib</span>
-                            <span>Graph Theory</span>
+                        <!-- CERTIFICATE 5 -->
+                        <div class="cert-card">
+                            <div>
+                                <div class="cert-top-row">
+                                    <span class="cert-icon">🤖</span>
+                                    <span class="mono-badge badge-cyan">2025</span>
+                                </div>
+                                <h4>HCIA-AI V3.5 Course</h4>
+                                <p class="cert-issuer">Huawei Talent Online</p>
+                            </div>
+                            <span class="mono-badge badge-indigo">Artificial Intelligence</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-result">
-                    <strong>Fokus Proyek</strong>
-                    <p>
-                        Membandingkan penerapan algoritma pencarian
-                        jalur terpendek dan memvisualisasikan
-                        jaringan rute menggunakan graf.
-                    </p>
-                </div>
-
-                <a
-                    href="https://github.com/muhammadabidwijiyanto-ops/PROJEK-ALGORITMA-DAN-STRUKTUR-DATA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                >
-                    Lihat Repository GitHub <span>↗</span>
-                </a>
             </div>
+        </section>
 
-            <!-- PROJECT 4 -->
-            <div class="project-card">
-                <div class="project-top">
-                    <span class="project-category">Data Analysis & EDA</span>
-                    <span class="project-year">2025–2026</span>
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">INITIATE CONVERSATION</span>
+                    <h2>Mari Terhubung & Berkolaborasi</h2>
+                    <p>Terbuka untuk kesempatan magang (internship), kolaborasi riset & analisis data, serta diskusi profesional.</p>
                 </div>
 
-                <h3>
-                    Flight Performance Analysis & Dashboard
-                    — NYC Airports
-                </h3>
+                <div class="contact-bento-grid">
+                    <div class="contact-callout-card">
+                        <div>
+                            <span class="contact-eyebrow">// Peluang Magang & Proyek Data</span>
+                            <h3>Siap menghadirkan solusi berbasis data kuantitatif.</h3>
+                            <p>
+                                Saya memiliki antusiasme tinggi untuk terus mengaplikasikan kemampuan di bidang <strong>Data Analysis, Business & Operations</strong>, serta penerapan model matematika dalam menyelesaikan permasalahan nyata di industri modern.
+                            </p>
+                        </div>
 
-                <p class="project-description">
-                    Melakukan analisis terhadap 327.346 data
-                    penerbangan pada tiga bandara utama New York:
-                    EWR, JFK, dan LGA untuk memahami pola
-                    operasional serta kinerja penerbangan.
-                </p>
-
-                <div class="project-details">
-                    <div>
-                        <h4>Analisis</h4>
-                        <p>
-                            Analisis volume penerbangan, keterlambatan,
-                            tren bulanan, kinerja maskapai dan bandara,
-                            destinasi, serta jarak penerbangan.
-                        </p>
+                        <div class="contact-actions-group">
+                            <a href="mailto:muhammadabidwijiyanto@gmail.com" class="btn btn-primary">
+                                Kirim Email Langsung <span>→</span>
+                            </a>
+                            <a href="assets/CV-Abid.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                Unduh CV / Resume <span>↓</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <div>
-                        <h4>Tools</h4>
-                        <div class="project-tags">
-                            <span>Data Analysis</span>
-                            <span>EDA</span>
-                            <span>Data Visualization</span>
-                            <span>Dashboard</span>
+                    <div class="contact-items-stack">
+                        <!-- EMAIL -->
+                        <a href="mailto:muhammadabidwijiyanto@gmail.com" class="contact-item-link" id="emailContactLink" title="Klik untuk mengirim email">
+                            <div class="contact-icon-box">@</div>
+                            <div class="contact-meta">
+                                <span>Email Resmi</span>
+                                <h4>muhammadabidwijiyanto@gmail.com</h4>
+                            </div>
+                            <span class="contact-arrow">↗</span>
+                        </a>
+
+                        <!-- LINKEDIN -->
+                        <a href="https://linkedin.com/in/muhammad-abid-wiji09" target="_blank" rel="noopener noreferrer" class="contact-item-link">
+                            <div class="contact-icon-box">in</div>
+                            <div class="contact-meta">
+                                <span>LinkedIn Network</span>
+                                <h4>Muhammad Abid Wijiyanto</h4>
+                            </div>
+                            <span class="contact-arrow">↗</span>
+                        </a>
+
+                        <!-- GITHUB -->
+                        <a href="https://github.com/muhammadabidwijiyanto-ops" target="_blank" rel="noopener noreferrer" class="contact-item-link">
+                            <div class="contact-icon-box">GH</div>
+                            <div class="contact-meta">
+                                <span>GitHub Repositories</span>
+                                <h4>muhammadabidwijiyanto-ops</h4>
+                            </div>
+                            <span class="contact-arrow">↗</span>
+                        </a>
+
+                        <!-- LOCATION -->
+                        <div class="contact-item-link" style="cursor: default;">
+                            <div class="contact-icon-box">⌖</div>
+                            <div class="contact-meta">
+                                <span>Lokasi Domisili</span>
+                                <h4>Depok, Indonesia</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-result">
-                    <strong>Temuan Utama</strong>
-                    <p>
-                        Sebanyak 39,02% penerbangan dalam dataset
-                        tercatat mengalami keterlambatan
-                        keberangkatan.
-                    </p>
-                </div>
-
-                <a
-                    href="https://github.com/muhammadabidwijiyanto-ops/PROJEK-ANALIS-DATA-EKSPLORASI"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                >
-                    Lihat Repository GitHub <span>↗</span>
-                </a>
             </div>
-
-        </div>
-    </div>
-</section>
-<!-- ==================== END PROJECTS SECTION ==================== -->
-
-<!-- ==================== ACHIEVEMENTS & CERTIFICATIONS ==================== -->
-<section id="achievements" class="achievements-section">
-    <div class="achievements-container">
-
-        <div class="section-heading">
-            <span class="section-label">PENCAPAIAN DAN PENGEMBANGAN DIRI</span>
-            <h2>Achievements & Certifications</h2>
-            <p>
-                Pencapaian kompetisi dan sertifikasi yang mencerminkan
-                proses pengembangan kemampuan akademik, teknis,
-                dan profesional saya.
-            </p>
-        </div>
-
-        <!-- ACHIEVEMENTS -->
-        <div class="achievement-group">
-
-            <div class="subsection-heading">
-                <span class="subsection-line"></span>
-                <h3>Achievements</h3>
-            </div>
-
-            <div class="achievement-card">
-
-                <div class="achievement-header">
-                    <div class="achievement-icon">🏆</div>
-
-                    <div class="achievement-status">
-                        FINALIST
-                    </div>
-                </div>
-
-                <span class="achievement-year">2026</span>
-
-                <h3>IPB Mathematics Challenge (IMC) 2026</h3>
-
-                <h4>
-                    Infographic Competition — Machine Learning Subtheme
-                </h4>
-
-                <p class="achievement-description">
-                    Berpartisipasi dalam kompetisi infografis
-                    IPB Mathematics Challenge 2026 sebagai bagian
-                    dari Tim Wani Fit-in Histogram (WFH).
-                    Berhasil mencapai tahap finalis melalui karya
-                    bertema penerapan Machine Learning dalam
-                    prediksi risiko keterlambatan penerbangan.
-                </p>
-
-                <div class="achievement-project">
-                    <strong>Judul Karya</strong>
-                    <p>
-                        "Sebelum Terlambat: Memprediksi Risiko Delay
-                        Penerbangan dengan Machine Learning"
-                    </p>
-                </div>
-
-                <div class="achievement-details">
-                    <div>
-                        <strong>Kontribusi</strong>
-                        <p>
-                            Exploratory Data Analysis (EDA) dan
-                            penerapan Logistic Regression dengan
-                            class weighting untuk memprediksi
-                            risiko keterlambatan penerbangan.
-                        </p>
-                    </div>
-
-                    <div>
-                        <strong>Evaluasi Model</strong>
-                        <div class="achievement-tags">
-                            <span>Recall</span>
-                            <span>ROC-AUC</span>
-                            <span>F1-Score</span>
-                            <span>Accuracy</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="achievement-footer">
-                    <span>Team: Wani Fit-in Histogram (WFH)</span>
-                    <span>Team ID: IMC26IC32</span>
-                </div>
-
-                <a
-                    href="https://github.com/muhammadabidwijiyanto-ops/LOMBA-IMC-2026"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="achievement-link"
-                >
-                    Lihat Dokumentasi Kompetisi di GitHub
-                    <span>↗</span>
-                </a>
-
-            </div>
-        </div>
-
-        <!-- CERTIFICATIONS -->
-        <div class="certification-group">
-
-            <div class="subsection-heading">
-                <span class="subsection-line"></span>
-                <h3>Certifications</h3>
-            </div>
-
-            <div class="certification-grid">
-
-                <!-- CERTIFICATE 1 -->
-                <div class="certification-card">
-                    <div class="certificate-icon">📜</div>
-
-                    <span class="certificate-year">2026</span>
-
-                    <h4>Python Programming Basics</h4>
-
-                    <p>Huawei ICT Academy</p>
-
-                    <span class="certificate-category">
-                        Programming
-                    </span>
-                </div>
-
-                <!-- CERTIFICATE 2 -->
-                <div class="certification-card">
-                    <div class="certificate-icon">☁</div>
-
-                    <span class="certificate-year">2026</span>
-
-                    <h4>
-                        Development and Basic Concepts of Cloud Computing
-                    </h4>
-
-                    <p>Huawei ICT Academy</p>
-
-                    <span class="certificate-category">
-                        Cloud Computing
-                    </span>
-                </div>
-
-                <!-- CERTIFICATE 3 -->
-                <div class="certification-card">
-                    <div class="certificate-icon">📊</div>
-
-                    <span class="certificate-year">2025</span>
-
-                    <h4>HCIA-Big Data V3.5 Course</h4>
-
-                    <p>Huawei ICT Academy</p>
-
-                    <span class="certificate-category">
-                        Big Data
-                    </span>
-                </div>
-
-                <!-- CERTIFICATE 4 -->
-                <div class="certification-card">
-                    <div class="certificate-icon">🌐</div>
-
-                    <span class="certificate-year">2025</span>
-
-                    <h4>
-                        HCIA-Big Data V3.5 Course
-                        (Colombia Training Program)
-                    </h4>
-
-                    <p>Huawei ICT Academy</p>
-
-                    <span class="certificate-category">
-                        Big Data
-                    </span>
-                </div>
-
-                <!-- CERTIFICATE 5 -->
-                <div class="certification-card">
-                    <div class="certificate-icon">🤖</div>
-
-                    <span class="certificate-year">2025</span>
-
-                    <h4>HCIA-AI V3.5 Course</h4>
-
-                    <p>Huawei Talent Online</p>
-
-                    <span class="certificate-category">
-                        Artificial Intelligence
-                    </span>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- ==================== END ACHIEVEMENTS & CERTIFICATIONS ==================== -->
-
-<!-- ==================== CONTACT SECTION ==================== -->
-<section id="contact" class="contact-section">
-    <div class="contact-container">
-
-        <div class="section-heading">
-            <span class="section-label">MARI TERHUBUNG</span>
-            <h2>Let's Connect</h2>
-            <p>
-                Saya terbuka untuk kesempatan magang, kolaborasi proyek,
-                diskusi akademik, dan peluang pengembangan profesional.
-            </p>
-        </div>
-
-        <div class="contact-grid">
-
-            <!-- CONTACT INTRO -->
-            <div class="contact-intro">
-                <span class="contact-greeting">
-                    Punya peluang atau ide menarik?
-                </span>
-
-                <h3>Mari berdiskusi dan berkolaborasi.</h3>
-
-                <p>
-                    Saya tertarik untuk terus mengembangkan kemampuan
-                    di bidang Data Analysis, Business & Operations,
-                    serta penerapan matematika dalam menyelesaikan
-                    permasalahan nyata.
-                </p>
-
-                <a
-                    href="mailto:muhammadabidwijiyanto@gmail.com"
-                    class="contact-button"
-                >
-                    Hubungi Saya <span>↗</span>
-                </a>
-            </div>
-
-            <!-- CONTACT INFORMATION -->
-            <div class="contact-information">
-
-                <!-- EMAIL -->
-                <a
-                    href="mailto:muhammadabidwijiyanto@gmail.com"
-                    class="contact-item"
-                >
-                    <div class="contact-icon">@</div>
-                    <div>
-                        <span>Email</span>
-                        <h4>muhammadabidwijiyanto@gmail.com</h4>
-                    </div>
-                    <span class="contact-arrow">↗</span>
-                </a>
-
-                <!-- LINKEDIN -->
-                <a
-                    href="https://linkedin.com/in/muhammad-abid-wiji09"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-item"
-                >
-                    <div class="contact-icon">in</div>
-                    <div>
-                        <span>LinkedIn</span>
-                        <h4>Muhammad Abid Wijiyanto</h4>
-                    </div>
-                    <span class="contact-arrow">↗</span>
-                </a>
-
-                <!-- GITHUB -->
-                <a
-                    href="https://github.com/muhammadabidwijiyanto-ops"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-item"
-                >
-                    <div class="contact-icon">GH</div>
-                    <div>
-                        <span>GitHub</span>
-                        <h4>muhammadabidwijiyanto-ops</h4>
-                    </div>
-                    <span class="contact-arrow">↗</span>
-                </a>
-
-                <!-- LOCATION -->
-                <div class="contact-item">
-                    <div class="contact-icon">⌖</div>
-                    <div>
-                        <span>Lokasi</span>
-                        <h4>Depok, Indonesia</h4>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- ==================== END CONTACT SECTION ==================== -->
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-    <div class="footer-container">
-
-        <div class="footer-brand">
-            <h3>Abid<span>.</span></h3>
-            <p>
-                Mathematics Student | Data Analysis & Statistical Computing
-            </p>
-        </div>
-
-        <div class="footer-socials">
-            <a href="https://linkedin.com/in/muhammad-abid-wiji09"
-               target="_blank" rel="noopener noreferrer">
-                LinkedIn
-            </a>
-
-            <a href="https://github.com/muhammadabidwijiyanto-ops"
-               target="_blank" rel="noopener noreferrer">
-                GitHub
-            </a>
-
-            <a href="mailto:muhammadabidwijiyanto@gmail.com">
-                Email
-            </a>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>
-            © 2026 Muhammad Abid Wijiyanto. All Rights Reserved.
-        </p>
-        <p>Built with passion and continuous learning.</p>
-    </div>
-</footer>
-<!-- ==================== END FOOTER ==================== -->
-
+        </section>
     </main>
 
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top-row">
+                <div class="footer-brand">
+                    <h3>Abid<span class="logo-dot">.</span></h3>
+                    <p>Mathematics Student | Data Analysis, Statistical Computing & Business Operations</p>
+                </div>
+
+                <div class="footer-social-links">
+                    <a href="https://linkedin.com/in/muhammad-abid-wiji09" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/muhammadabidwijiyanto-ops" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:muhammadabidwijiyanto@gmail.com">Email</a>
+                    <a href="assets/CV-Abid.pdf" target="_blank" rel="noopener noreferrer">Resume CV</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom-row">
+                <p>© 2026 Muhammad Abid Wijiyanto. All Rights Reserved. Built with analytical precision.</p>
+                <button class="back-to-top-btn" id="backToTopBtn" aria-label="Kembali ke atas">
+                    <span>Kembali ke atas</span>
+                    <span>↑</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
     <script src="script.js"></script>
 </body>
 </html>
