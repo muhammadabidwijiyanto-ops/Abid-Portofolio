@@ -195,6 +195,508 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ----------------------------------------------------------------------
+       6. PROJECT DETAIL MODAL
+       ---------------------------------------------------------------------- */
+
+    const projectModal = document.getElementById('project-modal');
+    const projectModalTitle = document.getElementById('project-modal-title');
+    const projectModalBody = document.getElementById('project-modal-body');
+    const projectModalClose = projectModal?.querySelector('.project-modal-close');
+
+    const projectDetails = {
+        nyc: {
+            category: 'DATA ANALYSIS & EXPLORATORY DATA ANALYSIS',
+            title: 'NYC Flights Performance Analysis & Dashboard',
+            summary: 'Analisis performa penerbangan di tiga bandara utama New York pada tahun 2013. Proyek ini mengeksplorasi pola keterlambatan, performa maskapai, bandara, dan faktor operasional penerbangan.',
+            gallery: [
+                { src: "assets/images/projects/nyc-flights/nyc-dashboard-overview.jpg", alt: "Dashboard overview — ringkasan performa penerbangan", caption: "Dashboard overview — ringkasan performa penerbangan" },
+                { src: "assets/images/projects/nyc-flights/nyc-dashboard-airlines.jpg", alt: "Analisis performa maskapai", caption: "Analisis performa maskapai" },
+                { src: "assets/images/projects/nyc-flights/nyc-dashboard-airports.jpg", alt: "Analisis performa bandara", caption: "Analisis performa bandara" }
+            ],
+            stats: [
+                ['327,346', 'Observasi penerbangan'],
+                ['39.02%', 'Departure delay rate'],
+                ['12.56 menit', 'Rata-rata departure delay'],
+                ['60.98%', 'On-time departure']
+            ],
+            sections: [
+                {
+                    title: 'Ruang Lingkup Analisis',
+                    text: 'Eksplorasi volume penerbangan, pola keterlambatan berdasarkan waktu, perbandingan performa maskapai, serta analisis bandara keberangkatan JFK, LGA, dan EWR.'
+                },
+                {
+                    title: 'Temuan Utama',
+                    text: 'US Airways mencatat delay rate terendah sebesar 27.27%, sedangkan Frontier Airlines tertinggi sebesar 54.51%. EWR memiliki porsi volume penerbangan terbesar, yaitu 35.8%.'
+                },
+                {
+                    title: 'Metodologi & Tools',
+                    text: 'Data cleaning, exploratory data analysis (EDA), analisis statistik deskriptif, visualisasi data, Python, Pandas, Matplotlib, Seaborn, dan Google Looker Studio.'
+                }
+            ],
+            tools: ['Python', 'Pandas', 'EDA', 'Matplotlib', 'Seaborn', 'Looker Studio'],
+            links: [
+                ['GitHub Repository', 'https://github.com/muhammadabidwijiyanto-ops/PROJEK-ANALIS-DATA-EKSPLORASI'],
+                ['Interactive Dashboard', 'https://datastudio.google.com/reporting/0da66950-09cc-4666-aaf1-cded388b9e6a']
+            ]
+        },
+
+        courier: {
+            category: 'ALGORITHMS & COMPUTATIONAL THINKING',
+            title: 'Smart Courier Route Recommendation',
+            summary: 'Implementasi algoritma graf untuk menentukan rute pengiriman terpendek dari gudang menuju beberapa titik rumah menggunakan pendekatan shortest path.',
+            gallery: [
+                { src: "assets/images/projects/smart-courier/courier-visual-01.png", alt: "Visualisasi graf dan rute terpendek", caption: "Visualisasi graf dan rute terpendek" },
+                { src: "assets/images/projects/smart-courier/courier-visual-02.png", alt: "Perbandingan performa algoritma", caption: "Perbandingan performa algoritma" },
+                { src: "assets/images/projects/smart-courier/courier-visual-03.png", alt: "Desain dan arsitektur sistem", caption: "Desain dan arsitektur sistem" },
+                { src: "assets/images/projects/smart-courier/courier-visual-04.png", alt: "Studi kasus dan kebutuhan sistem", caption: "Studi kasus dan kebutuhan sistem" }
+            ],
+            stats: [
+                ['15', 'Node'],
+                ['19', 'Edge'],
+                ['12 km', 'Total rute terpendek'],
+                ['24 menit', 'Estimasi waktu perjalanan']
+            ],
+            sections: [
+                {
+                    title: 'Representasi Graf',
+                    text: 'Jaringan direpresentasikan sebagai graf tak berarah berbobot dengan 15 node, terdiri dari satu gudang dan 14 rumah tujuan, serta 19 edge dengan total bobot jarak 63 km.'
+                },
+                {
+                    title: 'Pendekatan Algoritmik',
+                    text: 'Proyek mengimplementasikan adjacency list, Dijkstra secara manual, dan Floyd–Warshall untuk mempelajari pencarian lintasan terpendek.'
+                },
+                {
+                    title: 'Hasil Rute',
+                    text: 'Rute yang diperoleh adalah Warehouse → B → F → L → M dengan total jarak 12 km. Estimasi waktu perjalanan adalah 24 menit dengan asumsi kecepatan rata-rata 30 km/jam.'
+                }
+            ],
+            tools: ['Python', 'Graph Theory', 'Dijkstra', 'Floyd–Warshall', 'Adjacency List'],
+            links: [
+                ['GitHub Repository', 'https://github.com/muhammadabidwijiyanto-ops/PROJEK-ALGORITMA-DAN-STRUKTUR-DATA']
+            ]
+        },
+
+        himeng: {
+            category: 'STATISTICAL ANALYSIS & SOCIAL IMPACT',
+            title: 'Evaluasi HIMATIKA Mengajar Gen 5',
+            summary: 'Evaluasi perubahan hasil belajar peserta didik setelah kegiatan HIMATIKA Mengajar Gen 5 di SDN Cikoneng. Analisis menggunakan pendekatan kuantitatif pretest dan posttest.',
+            gallery: [
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-01.png", alt: "Perbandingan rata-rata nilai pretest dan posttest", caption: "Perbandingan rata-rata nilai pretest dan posttest" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-02.png", alt: "Distribusi perubahan nilai peserta", caption: "Distribusi perubahan nilai peserta" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-03.png", alt: "Effect size program HIMATIKA Mengajar", caption: "Effect size program HIMATIKA Mengajar" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-04.png", alt: "Visualisasi ringkasan hasil analisis", caption: "Visualisasi ringkasan hasil analisis" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-05.png", alt: "Perbandingan hasil berdasarkan kelas", caption: "Perbandingan hasil berdasarkan kelas" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-06.png", alt: "Rekapitulasi data hasil evaluasi", caption: "Rekapitulasi data hasil evaluasi" }
+            ],
+            stats: [
+                ['83', 'Peserta didik'],
+                ['54.94', 'Rata-rata pretest'],
+                ['68.11', 'Rata-rata posttest'],
+                ['+13.17', 'Perubahan rata-rata']
+            ],
+            sections: [
+                {
+                    title: 'Desain Evaluasi',
+                    text: 'Penelitian menggunakan desain One-Group Pretest–Posttest pada 83 peserta didik kelas II sampai VI SDN Cikoneng.'
+                },
+                {
+                    title: 'Hasil Pengujian',
+                    text: 'Uji Wilcoxon menghasilkan p-value 0.0053. Nilai N-Gain sebesar 0.148 termasuk kategori rendah. Secara keseluruhan rata-rata posttest meningkat, tetapi kelas III dan V mengalami penurunan.'
+                },
+                {
+                    title: 'Interpretasi',
+                    text: 'Hasil menunjukkan adanya perubahan skor setelah kegiatan. Namun, peningkatan rata-rata tidak terjadi secara merata pada setiap kelas. Desain satu kelompok juga membatasi kesimpulan kausal.'
+                }
+            ],
+            tools: ['R', 'Statistical Analysis', 'Wilcoxon Test', 'N-Gain', 'Data Visualization'],
+            links: [
+                ['GitHub Repository', 'https://github.com/muhammadabidwijiyanto-ops/PROJEK-HIMENGxPRRISMA']
+            ]
+        },
+
+        model: {
+            category: 'STATISTICAL MODELING & ECONOMETRICS',
+            title: 'Campus Electric Transportation Satisfaction',
+            summary: 'Pemodelan faktor-faktor yang berhubungan dengan kepuasan pengguna layanan transportasi listrik kampus UIN Jakarta menggunakan regresi linear dan pengembangan model kandidat.',
+            gallery: [
+                { src: "assets/images/projects/model-linear/model-linear-visual-01.png", alt: "Ringkasan analisis kepuasan pengguna", caption: "Ringkasan analisis kepuasan pengguna" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-03.png", alt: "Matriks korelasi antarvariabel", caption: "Matriks korelasi antarvariabel" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-04.png", alt: "Normal Q-Q plot residual", caption: "Normal Q-Q plot residual" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-05.png", alt: "Distribusi residual model", caption: "Distribusi residual model" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-06.png", alt: "Diagnostik residual model", caption: "Diagnostik residual model" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-07.png", alt: "Hubungan kemudahan akses dan kepuasan", caption: "Hubungan kemudahan akses dan kepuasan" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-08.png", alt: "Interaksi kemudahan akses dan kecepatan", caption: "Interaksi kemudahan akses dan kecepatan" }
+            ],
+            stats: [
+                ['134', 'Responden valid'],
+                ['0.6436', 'Adjusted R²'],
+                ['0.5068', '10-fold CV RMSE'],
+                ['0.4163', 'MAE']
+            ],
+            sections: [
+                {
+                    title: 'Variabel Penelitian',
+                    text: 'Variabel respons adalah kepuasan pengguna. Prediktor meliputi kemudahan akses, kenyamanan, kecepatan, keamanan, frekuensi penggunaan, dan kepemilikan kendaraan pribadi.'
+                },
+                {
+                    title: 'Pemodelan',
+                    text: 'Analisis dilakukan menggunakan R. Model IP2 menggabungkan komponen polinomial dan interaksi untuk mengevaluasi hubungan yang tidak sepenuhnya linear.'
+                },
+                {
+                    title: 'Hasil Model',
+                    text: 'Model IP2 memperoleh Adjusted R² sebesar 0.6436 dan 10-fold cross-validation RMSE sebesar 0.5068. Prediktor signifikan mencakup kecepatan, kenyamanan, keamanan, kepemilikan kendaraan pribadi, akses kuadrat, serta interaksi akses dan kecepatan.'
+                }
+            ],
+            tools: ['R', 'Multiple Linear Regression', 'Model Selection', 'Interaction', 'Polynomial Regression', 'Cross-Validation'],
+            links: [
+                ['GitHub Repository', 'https://github.com/muhammadabidwijiyanto-ops/PROJEK-MODEL-LINEAR']
+            ]
+        },
+
+        imc: {
+            category: 'NATIONAL COMPETITION & MACHINE LEARNING',
+            title: 'IMC 2026 — Infographic Challenge',
+            summary: 'Karya infografis ilmiah dalam IPB Mathematics Challenge 2026 bersama tim Wani Fit-in Histogram (WFH), dengan topik prediksi risiko keterlambatan penerbangan menggunakan Machine Learning.',
+            gallery: [
+                { src: "assets/images/projects/imc-2026/imc-team-poster.webp", alt: "Poster tim Wani Fit-in Histogram (WFH)", caption: "Poster tim Wani Fit-in Histogram (WFH)" },
+                { src: "assets/images/projects/imc-2026/imc-documentation-01.jpg", alt: "Dokumentasi kegiatan IMC 2026", caption: "Dokumentasi kegiatan IMC 2026" }
+            ],
+            stats: [
+                ['National Finalist', 'Pencapaian kompetisi'],
+                ['WFH', 'Nama tim'],
+                ['IMC26IC32', 'Team ID'],
+                ['6.88 juta', 'Data penerbangan dalam karya']
+            ],
+            sections: [
+                {
+                    title: 'Karya Kompetisi',
+                    text: 'Sebelum Terlambat: Memprediksi Risiko Delay Penerbangan dengan Machine Learning.'
+                },
+                {
+                    title: 'Kontribusi',
+                    text: 'Mengembangkan dan menyajikan gagasan analisis prediktif dalam format infografis ilmiah untuk mengomunikasikan penerapan Machine Learning pada permasalahan keterlambatan penerbangan.'
+                },
+                {
+                    title: 'Pencapaian',
+                    text: 'Tim Wani Fit-in Histogram (WFH) berhasil menjadi National Finalist dalam Infographic Challenge yang diselenggarakan oleh Gugus Mahasiswa Matematika IPB University.'
+                }
+            ],
+            tools: ['Machine Learning', 'Data Analysis', 'Infographic Design', 'Statistical Communication'],
+            links: [
+                ['GitHub Repository', 'https://github.com/muhammadabidwijiyanto-ops/LOMBA-IMC-2026'],
+                ['Sertifikat National Finalist', 'assets/images/projects/imc-2026/imc-finalist-certificate.pdf']
+            ]
+        },
+
+        work: {
+            type: 'EXPERIENCE',
+            category: 'PROFESSIONAL EXPERIENCE',
+            title: 'Staf Administrasi dan Operasional — CV Panji Jaya Abadi',
+            summary: 'Mendukung pencatatan transaksi, pengelolaan data operasional, pelayanan pelanggan, dan kelancaran administrasi harian.',
+            stats: [['Des 2025', 'Mulai bergabung'], ['10 truk/hari', 'Skala data operasional'], ['Administrasi', 'Fokus pekerjaan'], ['Operasional', 'Area kontribusi']],
+            sections: [
+                { title: 'Tanggung Jawab', text: 'Mencatat transaksi dan setoran, mengolah data operasional termasuk berat ayam serta data logistik pengiriman, menyiapkan bon pelanggan, dan membantu pelayanan pelanggan.' },
+                { title: 'Kontribusi', text: 'Mendukung akurasi pencatatan dan kelancaran proses administrasi serta operasional harian.' }
+            ],
+            tools: ['Administrasi', 'Data Recording', 'Operational Support', 'Customer Service'],
+            links: []
+        },
+        invers: {
+            type: 'ORGANIZATIONAL EXPERIENCE',
+            category: 'HIMATIKA UIN JAKARTA · 2026–2027',
+            title: 'Staff Departemen INVERS',
+            summary: 'Terlibat dalam kegiatan Departemen INVERS HIMATIKA UIN Jakarta pada periode 2026–2027.',
+            gallery: [
+                { src: 'assets/images/experience/invers/invers-01.jpg', alt: 'Foto Staff Invers HIMATIKA', caption: 'Foto Staff Invers HIMATIKA' },
+                { src: 'assets/images/experience/invers/invers-02.jpg', alt: 'Foto bersama staff HIMATIKA', caption: 'Foto bersama staff HIMATIKA' }
+            ],
+            sections: [
+                { title: 'Peran', text: 'Staff Departemen INVERS HIMATIKA UIN Jakarta.' },
+                { title: 'Fokus Kontribusi', text: 'Mendukung pelaksanaan program kerja departemen dan kegiatan organisasi. Rincian tugas dapat ditambahkan sesuai program kerja yang dijalankan.' }
+            ],
+            tools: ['Organizational Work', 'Team Collaboration', 'Communication'],
+            links: []
+        },
+        rasio: {
+            type: 'ORGANIZATIONAL EXPERIENCE',
+            category: 'HIMATIKA UIN JAKARTA · 2025–2026',
+            title: 'Staff Departemen RASIO',
+            summary: 'Berperan sebagai PIC HIMATIKA Esports serta mendukung koordinasi pelaksanaan kegiatan esports.',
+            sections: [
+                { title: 'Tanggung Jawab', text: 'Menjadi Penanggung Jawab (PIC) HIMATIKA Esports dan mengoordinasikan dukungan pelaksanaan program serta kegiatan esports HIMATIKA.' }
+            ],
+            tools: ['Coordination', 'Teamwork', 'Event Operations'],
+            links: []
+        },
+        himeng5: {
+            type: 'COMMITTEE EXPERIENCE',
+            category: 'HIMATIKA UIN JAKARTA',
+            title: 'Ketua Pelaksana — HIMATIKA Mengajar Gen 5',
+            summary: 'Memimpin perencanaan dan pelaksanaan program HIMATIKA Mengajar Gen 5 serta mengoordinasikan panitia dan pihak terkait.',
+            gallery: [
+                { src: 'assets/images/experience/himeng-gen5/himeng5-01.jpg', alt: 'Dokumentasi HIMATIKA Mengajar Gen 5', caption: 'Dokumentasi kegiatan' },
+                { src: 'assets/images/experience/himeng-gen5/himeng5-02.jpg', alt: 'Kebersamaan tim HIMATIKA Mengajar Gen 5', caption: 'Kebersamaan tim' },
+                { src: 'assets/images/experience/himeng-gen5/himeng5-03.jpg', alt: 'Sambutan Ketua Pelaksana', caption: 'Sambutan Ketua Pelaksana' },
+                { src: 'assets/images/experience/himeng-gen5/himeng5-04.jpg', alt: 'Penyerahan sertifikat kepada pihak sekolah', caption: 'Penyerahan sertifikat' },
+                { src: 'assets/images/experience/himeng-gen5/himeng5-05.jpg', alt: 'Interaksi dan pendampingan peserta didik', caption: 'Interaksi dan pendampingan peserta didik' }
+            ],
+            sections: [
+                { title: 'Kepemimpinan Program', text: 'Memimpin keseluruhan proses perencanaan dan pelaksanaan program serta mengoordinasikan divisi dan anggota kepanitiaan.' },
+                { title: 'Koordinasi', text: 'Memantau jalannya kegiatan dan memastikan kebutuhan setiap divisi dapat terpenuhi.' }
+            ],
+            tools: ['Leadership', 'Program Management', 'Team Coordination'],
+            links: []
+        },
+        musyaka: {
+            type: 'COMMITTEE EXPERIENCE',
+            category: 'HIMATIKA UIN JAKARTA · FEBRUARI–APRIL 2026',
+            title: 'Ketua Pelaksana — MUSYAKA 2026',
+            summary: 'Memimpin proses perencanaan dan pelaksanaan MUSYAKA 2026 serta mengoordinasikan divisi, panitia, dan kebutuhan operasional kegiatan.',
+            gallery: [
+                { src: 'assets/images/experience/musyaka/musyaka-01.jpg', alt: 'Dokumentasi kegiatan MUSYAKA', caption: 'Dokumentasi kegiatan MUSYAKA' },
+                { src: 'assets/images/experience/musyaka/musyaka-02.jpg', alt: 'Sambutan Ketua Pelaksana', caption: 'Sambutan Ketua Pelaksana' },
+                { src: 'assets/images/experience/musyaka/musyaka-03.jpg', alt: 'Dokumentasi tambahan MUSYAKA 2026', caption: 'Dokumentasi MUSYAKA 2026' }
+            ],
+            sections: [
+                { title: 'Kepemimpinan', text: 'Memimpin keseluruhan proses perencanaan dan pelaksanaan kegiatan serta mengoordinasikan divisi dan anggota kepanitiaan.' },
+                { title: 'Pengelolaan Kegiatan', text: 'Memantau pelaksanaan kegiatan dan memastikan kebutuhan operasional setiap divisi terpenuhi.' }
+            ],
+            tools: ['Leadership', 'Event Management', 'Coordination'],
+            links: []
+        },
+        teorema15: {
+            type: 'COMMITTEE EXPERIENCE',
+            category: 'HIMATIKA UIN JAKARTA · AGUSTUS–NOVEMBER 2026',
+            title: 'Kepala Divisi Lapangan — Teorema 15',
+            summary: 'Mengoordinasikan operasional lapangan, logistik, personel, serta kebutuhan lokasi dan akomodasi kegiatan.',
+            gallery: [
+                { src: 'assets/images/experience/teorema15/teorema15-01.jpg', alt: 'Dokumentasi peserta dan panitia Teorema 15', caption: 'Dokumentasi peserta dan panitia' },
+                { src: 'assets/images/experience/teorema15/teorema15-02.jpg', alt: 'Dokumentasi peserta, panitia, serta tamu undangan', caption: 'Dokumentasi peserta, panitia, serta tamu undangan' },
+                { src: 'assets/images/experience/teorema15/teorema15-03.jpg', alt: 'Dokumentasi tim Teorema 15', caption: 'Kebersamaan tim' }
+            ],
+            sections: [
+                { title: 'Tanggung Jawab', text: 'Mengoordinasikan operasional lapangan dan kebutuhan logistik, mencari serta mengatur lokasi kegiatan dan akomodasi peserta, serta menyusun pembagian kamar dan tata letak akomodasi.' }
+            ],
+            tools: ['Field Operations', 'Logistics', 'Accommodation Planning', 'Coordination'],
+            links: []
+        },
+        teorema14: {
+            type: 'COMMITTEE EXPERIENCE',
+            category: 'HIMATIKA UIN JAKARTA · AGUSTUS–NOVEMBER 2025',
+            title: 'Kepala Divisi Lapangan — Teorema 14',
+            summary: 'Mengoordinasikan operasional lapangan dan anggota divisi serta membantu pengaturan lokasi dan akomodasi peserta.',
+            sections: [
+                { title: 'Tanggung Jawab', text: 'Mengoordinasikan operasional lapangan dan anggota divisi lapangan, serta mengatur kebutuhan lokasi kegiatan dan akomodasi peserta.' }
+            ],
+            tools: ['Field Operations', 'Team Coordination', 'Logistics'],
+            links: []
+        },
+        pbak: {
+            type: 'COMMITTEE EXPERIENCE',
+            category: 'HIMATIKA UIN JAKARTA · 2025',
+            title: 'Kepala Divisi Logistik — PBAK Jurusan Matematika 2025',
+            summary: 'Bertanggung jawab atas pengelolaan kebutuhan logistik dan pendistribusian perlengkapan operasional kegiatan.',
+            gallery: [
+                { src: 'assets/images/experience/pbak-2025/pbak-01.jpg', alt: 'Foto bersama peserta dan panitia PBAK', caption: 'Foto bersama peserta dan panitia PBAK' },
+                { src: 'assets/images/experience/pbak-2025/pbak-02.jpg', alt: 'Koordinasi kegiatan PBAK', caption: 'Koordinasi kegiatan PBAK' },
+                { src: 'assets/images/experience/pbak-2025/pbak-03.jpg', alt: 'Dokumentasi kegiatan PBAK', caption: 'Dokumentasi kegiatan PBAK' }
+            ],
+            sections: [
+                { title: 'Tanggung Jawab', text: 'Mengelola kebutuhan logistik kegiatan, mengatur persediaan perlengkapan operasional, dan mendukung pendistribusian perlengkapan agar kebutuhan kegiatan terpenuhi.' }
+            ],
+            tools: ['Logistics Management', 'Inventory', 'Event Operations'],
+            links: []
+        },
+        himeng4: {
+            type: 'COMMITTEE EXPERIENCE',
+            category: 'HIMATIKA UIN JAKARTA · 2025',
+            title: 'Staff Hubungan Masyarakat — HIMATIKA Mengajar Gen 4',
+            summary: 'Mendukung komunikasi dan hubungan dengan peserta serta pihak-pihak terkait selama pelaksanaan HIMATIKA Mengajar Gen 4.',
+            gallery: [
+                { src: 'assets/images/experience/himeng-gen4/himeng4-01.jpg', alt: 'Dokumentasi MC Himatika Mengajar Gen 4', caption: 'Dokumentasi MC Himatika Mengajar Gen 4' },
+                { src: 'assets/images/experience/himeng-gen4/himeng4-02.jpg', alt: 'Foto bersama tim pelaksana', caption: 'Foto bersama tim pelaksana' },
+                { src: 'assets/images/experience/himeng-gen4/himeng4-03.jpg', alt: 'Dokumentasi kegiatan bersama peserta didik', caption: 'Dokumentasi kegiatan bersama peserta didik' },
+                { src: 'assets/images/experience/himeng-gen4/himeng4-04.jpg', alt: 'Foto bersama peserta kegiatan', caption: 'Foto bersama peserta kegiatan' }
+            ],
+            sections: [
+                { title: 'Tanggung Jawab', text: 'Membantu komunikasi dan penyampaian informasi kepada peserta serta pihak terkait, sekaligus mendukung koordinasi hubungan masyarakat untuk kelancaran kegiatan.' }
+            ],
+            tools: ['Public Relations', 'Communication', 'Stakeholder Coordination'],
+            links: []
+        }
+    };
+
+    let lastProjectTrigger = null;
+
+    const openProjectModal = (projectId, trigger) => {
+        if (!projectModal || !projectModalTitle || !projectModalBody) return;
+
+        const project = projectDetails[projectId];
+        if (!project) return;
+
+        lastProjectTrigger = trigger;
+
+        projectModalTitle.textContent = project.title;
+        const modalKicker = document.getElementById('project-modal-kicker');
+        if (modalKicker) modalKicker.textContent = project.type || 'PROJECT DETAIL';
+        const galleryHeading = project.type ? 'Experience Gallery' : 'Project Gallery';
+
+        projectModalBody.innerHTML = `
+            <p class="project-modal-category">${project.category}</p>
+            <p class="project-modal-summary">${project.summary}</p>
+
+            ${project.gallery?.length ? `
+                <section class="project-modal-gallery" aria-label="Galeri dokumentasi">
+                    <div class="project-modal-gallery-heading">
+                        <h3>${galleryHeading}</h3>
+                        <span>${project.gallery.length} visual</span>
+                    </div>
+                    <div class="project-gallery-grid">
+                        ${project.gallery.map((item, index) => `
+                            <button type="button"
+                                    class="project-gallery-trigger"
+                                    data-gallery-index="${index}"
+                                    aria-label="Perbesar gambar: ${item.alt}">
+                                <img src="${item.src}" alt="${item.alt}" loading="lazy">
+                                <span class="project-gallery-caption">${item.caption}</span>
+                                <span class="project-gallery-zoom" aria-hidden="true">⤢</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                </section>
+            ` : ''}
+
+            ${project.stats?.length ? `
+            <div class="project-modal-stats">
+                ${project.stats.map(([value, label]) => `
+                    <div class="project-modal-stat">
+                        <strong>${value}</strong>
+                        <span>${label}</span>
+                    </div>
+                `).join('')}
+            </div>
+            ` : ''}
+
+            <div class="project-modal-sections">
+                ${project.sections.map(section => `
+                    <section class="project-modal-section">
+                        <h3>${section.title}</h3>
+                        <p>${section.text}</p>
+                    </section>
+                `).join('')}
+            </div>
+
+            <div class="project-modal-tools">
+                <h3>${project.type ? "Key Competencies" : "Tools & Technologies"}</h3>
+                <div class="project-modal-tags">
+                    ${project.tools.map(tool => `<span class="exp-tag">${tool}</span>`).join('')}
+                </div>
+            </div>
+
+            ${project.links?.length ? `
+            <div class="project-modal-actions">
+                ${project.links.map(([label, url]) => `
+                    <a href="${url}" target="_blank" rel="noopener noreferrer" class="project-modal-link">
+                        ${label} <span aria-hidden="true">↗</span>
+                    </a>
+                `).join('')}
+            </div>
+            ` : ''}
+        `;
+
+        projectModal.hidden = false;
+        projectModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        projectModalClose?.focus();
+    };
+
+    const closeProjectModal = () => {
+        if (!projectModal || projectModal.hidden) return;
+
+        projectModal.hidden = true;
+        projectModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+
+        lastProjectTrigger?.focus();
+        lastProjectTrigger = null;
+    };
+
+    // Lightweight image lightbox for project gallery visuals.
+    let activeGalleryTrigger = null;
+    const imageLightbox = document.createElement('div');
+    imageLightbox.className = 'project-image-lightbox';
+    imageLightbox.hidden = true;
+    imageLightbox.setAttribute('role', 'dialog');
+    imageLightbox.setAttribute('aria-modal', 'true');
+    imageLightbox.setAttribute('aria-label', 'Pratinjau gambar proyek');
+    imageLightbox.innerHTML = `
+        <button type="button" class="project-image-lightbox-close" aria-label="Tutup gambar">&times;</button>
+        <figure class="project-image-lightbox-figure">
+            <img class="project-image-lightbox-img" src="" alt="">
+            <figcaption class="project-image-lightbox-caption"></figcaption>
+        </figure>
+    `;
+    document.body.appendChild(imageLightbox);
+
+    const closeImageLightbox = () => {
+        if (imageLightbox.hidden) return;
+        imageLightbox.hidden = true;
+        imageLightbox.querySelector('.project-image-lightbox-img').src = '';
+        activeGalleryTrigger?.focus();
+        activeGalleryTrigger = null;
+    };
+
+    const openImageLightbox = (trigger) => {
+        const image = trigger.querySelector('img');
+        if (!image) return;
+        activeGalleryTrigger = trigger;
+        const lightboxImage = imageLightbox.querySelector('.project-image-lightbox-img');
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt;
+        imageLightbox.querySelector('.project-image-lightbox-caption').textContent =
+            trigger.querySelector('.project-gallery-caption')?.textContent || image.alt;
+        imageLightbox.hidden = false;
+        imageLightbox.querySelector('.project-image-lightbox-close').focus();
+    };
+
+    // Event delegation supports all project buttons and gallery images.
+    document.addEventListener('click', (event) => {
+        const target = event.target instanceof Element ? event.target : null;
+        if (!target) return;
+
+        const galleryTrigger = target.closest('.project-gallery-trigger');
+        if (galleryTrigger) {
+            openImageLightbox(galleryTrigger);
+            return;
+        }
+
+        if (target.closest('.project-image-lightbox-close') || target === imageLightbox) {
+            closeImageLightbox();
+            return;
+        }
+
+        const trigger = target.closest('[data-project]');
+        if (trigger) {
+            openProjectModal(trigger.getAttribute('data-project'), trigger);
+            return;
+        }
+
+        if (target.closest('[data-modal-close]')) {
+            closeProjectModal();
+        }
+    });
+
+    // Close the image preview first; otherwise close the project modal.
+    document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+        if (!imageLightbox.hidden) {
+            closeImageLightbox();
+        } else if (projectModal && !projectModal.hidden) {
+            closeProjectModal();
+        }
+    });
+    /* ----------------------------------------------------------------------
        6. CONSOLE SIGNATURE
        ---------------------------------------------------------------------- */
     console.log(
