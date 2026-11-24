@@ -10,6 +10,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check for user's reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    const getFocusableElements = (container) => Array.from(container?.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    ) || []).filter((element) => !element.hidden && element.getAttribute('aria-hidden') !== 'true' && element.getClientRects().length > 0);
+
+    const keepFocusInside = (event, container) => {
+        if (event.key !== 'Tab') return;
+
+        const focusableElements = getFocusableElements(container);
+        if (focusableElements.length === 0) {
+            event.preventDefault();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        const focusIsOutside = !container.contains(document.activeElement);
+
+        if (event.shiftKey && (document.activeElement === firstElement || focusIsOutside)) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && (document.activeElement === lastElement || focusIsOutside)) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    };
+
     /* ----------------------------------------------------------------------
        1. STICKY NAVBAR SCROLL BLUR EFFECT
        ---------------------------------------------------------------------- */
@@ -89,25 +115,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileToggle = document.getElementById('mobileNavToggle');
     const mobileDrawer = document.getElementById('mobileDrawer');
     const mobileOverlay = document.getElementById('mobileDrawerOverlay');
+    const mobileDrawerClose = document.getElementById('mobileDrawerClose');
+    const backgroundRegions = [
+        document.getElementById('headerWrapper'),
+        document.querySelector('main'),
+        document.querySelector('footer')
+    ].filter(Boolean);
+    let drawerPreviousOverflow = '';
 
     const openDrawer = () => {
         if (!mobileDrawer || !mobileOverlay) return;
+        drawerPreviousOverflow = document.body.style.overflow;
+        mobileDrawer.removeAttribute('inert');
+        mobileDrawer.setAttribute('aria-hidden', 'false');
         mobileDrawer.classList.add('open');
         mobileOverlay.classList.add('active');
+        mobileOverlay.setAttribute('aria-hidden', 'false');
+        backgroundRegions.forEach((region) => { region.inert = true; });
         if (mobileToggle) {
             mobileToggle.setAttribute('aria-expanded', 'true');
         }
         document.body.style.overflow = 'hidden';
+        mobileDrawerClose?.focus();
     };
 
-    const closeDrawer = () => {
+    const closeDrawer = (restoreFocus = true) => {
         if (!mobileDrawer || !mobileOverlay) return;
         mobileDrawer.classList.remove('open');
         mobileOverlay.classList.remove('active');
+        mobileDrawer.setAttribute('aria-hidden', 'true');
+        mobileDrawer.setAttribute('inert', '');
+        mobileOverlay.setAttribute('aria-hidden', 'true');
+        backgroundRegions.forEach((region) => { region.inert = false; });
         if (mobileToggle) {
             mobileToggle.setAttribute('aria-expanded', 'false');
         }
-        document.body.style.overflow = '';
+        document.body.style.overflow = drawerPreviousOverflow;
+        if (restoreFocus) mobileToggle?.focus();
     };
 
     if (mobileToggle) {
@@ -125,18 +169,27 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileOverlay.addEventListener('click', closeDrawer);
     }
 
+    mobileDrawerClose?.addEventListener('click', () => closeDrawer());
+
     // Close mobile drawer when clicking navigation links inside it
     if (mobileNavItems.length > 0) {
         mobileNavItems.forEach(link => {
-            link.addEventListener('click', closeDrawer);
+            link.addEventListener('click', () => {
+                const destination = document.querySelector(link.getAttribute('href'));
+                closeDrawer(false);
+                if (destination) {
+                    destination.setAttribute('tabindex', '-1');
+                    destination.focus({ preventScroll: true });
+                }
+            });
         });
     }
 
-    // Close on Escape key
+    // Keep keyboard focus in the open navigation drawer and restore it on close.
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileDrawer?.classList.contains('open')) {
-            closeDrawer();
-        }
+        if (!mobileDrawer?.classList.contains('open')) return;
+        if (e.key === 'Escape') closeDrawer();
+        else keepFocusInside(e, mobileDrawer);
     });
 
     /* ----------------------------------------------------------------------
@@ -153,10 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Update active button state
                 filterButtons.forEach(b => {
                     b.classList.remove('active');
-                    b.setAttribute('aria-selected', 'false');
+                    b.setAttribute('aria-pressed', 'false');
                 });
                 btn.classList.add('active');
-                btn.setAttribute('aria-selected', 'true');
+                btn.setAttribute('aria-pressed', 'true');
 
                 // Filter category display with smooth transition
                 categoryGroups.forEach(group => {
@@ -527,6 +580,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let lastProjectTrigger = null;
+    let modalPreviousOverflow = '';
+    const setModalBackgroundInert = (isInert) => {
+        const mainRegion = document.querySelector('main');
+        backgroundRegions.forEach((region) => {
+            if (region === mainRegion) {
+                Array.from(region.children).forEach((child) => {
+                    if (child !== projectModal) child.inert = isInert;
+                });
+            } else {
+                region.inert = isInert;
+            }
+        });
+    };
 
     const openProjectModal = (projectId, trigger) => {
         if (!projectModal || !projectModalTitle || !projectModalBody) return;
@@ -604,6 +670,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ` : ''}
         `;
 
+        modalPreviousOverflow = document.body.style.overflow;
+        setModalBackgroundInert(true);
         projectModal.hidden = false;
         projectModal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -616,7 +684,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         projectModal.hidden = true;
         projectModal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
+        setModalBackgroundInert(false);
+        document.body.style.overflow = modalPreviousOverflow;
 
         lastProjectTrigger?.focus();
         lastProjectTrigger = null;
@@ -643,6 +712,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (imageLightbox.hidden) return;
         imageLightbox.hidden = true;
         imageLightbox.querySelector('.project-image-lightbox-img').src = '';
+        if (projectModal && !projectModal.hidden) {
+            projectModal.inert = false;
+            projectModal.setAttribute('aria-hidden', 'false');
+        }
         activeGalleryTrigger?.focus();
         activeGalleryTrigger = null;
     };
@@ -656,6 +729,10 @@ document.addEventListener('DOMContentLoaded', () => {
         lightboxImage.alt = image.alt;
         imageLightbox.querySelector('.project-image-lightbox-caption').textContent =
             trigger.querySelector('.project-gallery-caption')?.textContent || image.alt;
+        if (projectModal && !projectModal.hidden) {
+            projectModal.inert = true;
+            projectModal.setAttribute('aria-hidden', 'true');
+        }
         imageLightbox.hidden = false;
         imageLightbox.querySelector('.project-image-lightbox-close').focus();
     };
@@ -689,11 +766,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close the image preview first; otherwise close the project modal.
     document.addEventListener('keydown', (event) => {
-        if (event.key !== 'Escape') return;
         if (!imageLightbox.hidden) {
-            closeImageLightbox();
+            if (event.key === 'Escape') closeImageLightbox();
+            else keepFocusInside(event, imageLightbox);
         } else if (projectModal && !projectModal.hidden) {
-            closeProjectModal();
+            if (event.key === 'Escape') closeProjectModal();
+            else keepFocusInside(event, projectModal.querySelector('.project-modal-dialog'));
         }
     });
     /* ----------------------------------------------------------------------

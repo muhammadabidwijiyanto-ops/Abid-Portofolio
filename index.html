@@ -77,7 +77,10 @@
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
-    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Menu">
+    <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Menu navigasi utama" inert>
+        <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Tutup menu navigasi">
+            &times;
+        </button>
         <div class="mobile-nav-links">
             <a href="#home" class="mobile-nav-item active">Home <span>↗</span></a>
             <a href="#about" class="mobile-nav-item">About <span>↗</span></a>
@@ -307,12 +310,12 @@
                     <p>Rekam jejak profesional, dedikasi dalam organisasi kemahasiswaan, dan kepemimpinan program strategis.</p>
                 </div>
 
-                <!-- Category Navigation Tabs -->
-                <div class="experience-tabs-nav" role="tablist">
-                    <button class="exp-tab-btn active" data-filter="all" role="tab" aria-selected="true">Semua Pengalaman</button>
-                    <button class="exp-tab-btn" data-filter="work" role="tab" aria-selected="false">Pengalaman Kerja</button>
-                    <button class="exp-tab-btn" data-filter="org" role="tab" aria-selected="false">Organisasi</button>
-                    <button class="exp-tab-btn" data-filter="committee" role="tab" aria-selected="false">Kepanitiaan</button>
+                <!-- Category filters are buttons, not tab panels. -->
+                <div class="experience-tabs-nav" role="group" aria-label="Filter pengalaman">
+                    <button type="button" class="exp-tab-btn active" data-filter="all" aria-pressed="true">Semua Pengalaman</button>
+                    <button type="button" class="exp-tab-btn" data-filter="work" aria-pressed="false">Pengalaman Kerja</button>
+                    <button type="button" class="exp-tab-btn" data-filter="org" aria-pressed="false">Organisasi</button>
+                    <button type="button" class="exp-tab-btn" data-filter="committee" aria-pressed="false">Kepanitiaan</button>
                 </div>
 
                 <!-- 1. PENGALAMAN KERJA (PROFESSIONAL SPOTLIGHT) -->
