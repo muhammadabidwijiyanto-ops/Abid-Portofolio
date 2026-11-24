@@ -5,10 +5,10 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. GOOGLE FONTS & DESIGN TOKENS
+   1. DESIGN TOKENS
+   Font stylesheets are declared in the document head so the browser can
+   discover them alongside the local stylesheet.
    -------------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-
 :root {
     /* Color Palette - Deep Slate / Void Canvas */
     --bg-canvas: #07090e;
