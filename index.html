@@ -140,11 +140,27 @@
                     <div class="hero-visual">
                         <div class="hero-image-card">
                             <div class="hero-image-inner">
-                                <img
-                                    src="assets/profile.jpg"
-                                    alt="Foto Profil Profesional Muhammad Abid Wijiyanto"
-                                    loading="eager"
-                                >
+                                <picture>
+                                    <source
+                                        type="image/avif"
+                                        srcset="assets/profile-480.avif 480w, assets/profile-800.avif 800w, assets/profile-1086.avif 1086w"
+                                        sizes="(max-width: 1024px) 270px, (max-width: 1366px) 320px, 350px"
+                                    >
+                                    <source
+                                        type="image/webp"
+                                        srcset="assets/profile-480.webp 480w, assets/profile-800.webp 800w, assets/profile-1086.webp 1086w"
+                                        sizes="(max-width: 1024px) 270px, (max-width: 1366px) 320px, 350px"
+                                    >
+                                    <img
+                                        src="assets/profile.jpg"
+                                        srcset="assets/profile-480.jpg 480w, assets/profile-800.jpg 800w, assets/profile.jpg 1086w"
+                                        sizes="(max-width: 1024px) 270px, (max-width: 1366px) 320px, 350px"
+                                        alt="Foto Profil Profesional Muhammad Abid Wijiyanto"
+                                        width="1086"
+                                        height="1448"
+                                        loading="eager"
+                                    >
+                                </picture>
                             </div>
 
                             <!-- Floating Metric Badge 1 -->

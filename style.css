@@ -39,7 +39,7 @@
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
-    --text-faint: #64748b;
+    --text-faint: #7f91a8;
 
     /* Typography */
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -685,6 +685,12 @@ section {
     border-radius: calc(var(--radius-xl) - 6px);
     overflow: hidden;
     position: relative;
+}
+
+.hero-image-inner picture {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-image-inner img {
@@ -2839,7 +2845,7 @@ section {
 }
 
 .project-modal-gallery-heading > span {
-    color: #64748b;
+    color: var(--text-faint);
     font-family: var(--font-mono);
     font-size: 0.72rem;
 }
@@ -2864,6 +2870,11 @@ section {
     border-radius: 12px;
     cursor: zoom-in;
     transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-gallery-trigger picture {
+    display: block;
+    width: 100%;
 }
 
 .project-gallery-trigger:hover {

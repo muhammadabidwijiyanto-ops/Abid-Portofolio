@@ -262,9 +262,9 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'NYC Flights Performance Analysis & Dashboard',
             summary: 'Analisis performa penerbangan di tiga bandara utama New York pada tahun 2013. Proyek ini mengeksplorasi pola keterlambatan, performa maskapai, bandara, dan faktor operasional penerbangan.',
             gallery: [
-                { src: "assets/images/projects/nyc-flights/nyc-dashboard-overview.jpg", alt: "Dashboard overview — ringkasan performa penerbangan", caption: "Dashboard overview — ringkasan performa penerbangan" },
-                { src: "assets/images/projects/nyc-flights/nyc-dashboard-airlines.jpg", alt: "Analisis performa maskapai", caption: "Analisis performa maskapai" },
-                { src: "assets/images/projects/nyc-flights/nyc-dashboard-airports.jpg", alt: "Analisis performa bandara", caption: "Analisis performa bandara" }
+                { src: "assets/images/projects/nyc-flights/nyc-dashboard-overview.jpg", webpSrcset: "assets/images/projects/nyc-flights/nyc-dashboard-overview-480.webp 480w, assets/images/projects/nyc-flights/nyc-dashboard-overview-640.webp 640w, assets/images/projects/nyc-flights/nyc-dashboard-overview-960.webp 960w, assets/images/projects/nyc-flights/nyc-dashboard-overview-1280.webp 1280w, assets/images/projects/nyc-flights/nyc-dashboard-overview-2048.webp 2048w", webpSizes: "(max-width: 380px) calc(100vw - 32px), (max-width: 600px) calc(100vw - 40px), (max-width: 700px) calc(50vw - 27px), (max-width: 936px) calc(50vw - 68px), 405px", width: 2048, height: 1170, alt: "Dashboard overview — ringkasan performa penerbangan", caption: "Dashboard overview — ringkasan performa penerbangan" },
+                { src: "assets/images/projects/nyc-flights/nyc-dashboard-airlines.jpg", webpSrcset: "assets/images/projects/nyc-flights/nyc-dashboard-airlines-480.webp 480w, assets/images/projects/nyc-flights/nyc-dashboard-airlines-640.webp 640w, assets/images/projects/nyc-flights/nyc-dashboard-airlines-960.webp 960w, assets/images/projects/nyc-flights/nyc-dashboard-airlines-1280.webp 1280w, assets/images/projects/nyc-flights/nyc-dashboard-airlines-2048.webp 2048w", webpSizes: "(max-width: 380px) calc(100vw - 32px), (max-width: 600px) calc(100vw - 40px), (max-width: 700px) calc(50vw - 27px), (max-width: 936px) calc(50vw - 68px), 405px", width: 2048, height: 1170, alt: "Analisis performa maskapai", caption: "Analisis performa maskapai" },
+                { src: "assets/images/projects/nyc-flights/nyc-dashboard-airports.jpg", webpSrcset: "assets/images/projects/nyc-flights/nyc-dashboard-airports-480.webp 480w, assets/images/projects/nyc-flights/nyc-dashboard-airports-640.webp 640w, assets/images/projects/nyc-flights/nyc-dashboard-airports-960.webp 960w, assets/images/projects/nyc-flights/nyc-dashboard-airports-1280.webp 1280w, assets/images/projects/nyc-flights/nyc-dashboard-airports-2048.webp 2048w", webpSizes: "(max-width: 380px) calc(100vw - 32px), (max-width: 600px) calc(100vw - 40px), (max-width: 700px) calc(50vw - 27px), (max-width: 936px) calc(50vw - 68px), 405px", width: 2048, height: 1151, alt: "Analisis performa bandara", caption: "Analisis performa bandara" }
             ],
             stats: [
                 ['327,346', 'Observasi penerbangan'],
@@ -298,10 +298,10 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Smart Courier Route Recommendation',
             summary: 'Implementasi algoritma graf untuk menentukan rute pengiriman terpendek dari gudang menuju beberapa titik rumah menggunakan pendekatan shortest path.',
             gallery: [
-                { src: "assets/images/projects/smart-courier/courier-visual-01.png", alt: "Visualisasi graf dan rute terpendek", caption: "Visualisasi graf dan rute terpendek" },
-                { src: "assets/images/projects/smart-courier/courier-visual-02.png", alt: "Perbandingan performa algoritma", caption: "Perbandingan performa algoritma" },
-                { src: "assets/images/projects/smart-courier/courier-visual-03.png", alt: "Desain dan arsitektur sistem", caption: "Desain dan arsitektur sistem" },
-                { src: "assets/images/projects/smart-courier/courier-visual-04.png", alt: "Studi kasus dan kebutuhan sistem", caption: "Studi kasus dan kebutuhan sistem" }
+                { src: "assets/images/projects/smart-courier/courier-visual-01.png", webpSrc: "assets/images/projects/smart-courier/courier-visual-01.webp", width: 968, height: 518, alt: "Visualisasi graf dan rute terpendek", caption: "Visualisasi graf dan rute terpendek" },
+                { src: "assets/images/projects/smart-courier/courier-visual-02.png", webpSrc: "assets/images/projects/smart-courier/courier-visual-02.webp", width: 976, height: 528, alt: "Perbandingan performa algoritma", caption: "Perbandingan performa algoritma" },
+                { src: "assets/images/projects/smart-courier/courier-visual-03.png", webpSrc: "assets/images/projects/smart-courier/courier-visual-03.webp", width: 1003, height: 549, alt: "Desain dan arsitektur sistem", caption: "Desain dan arsitektur sistem" },
+                { src: "assets/images/projects/smart-courier/courier-visual-04.png", webpSrc: "assets/images/projects/smart-courier/courier-visual-04.webp", width: 957, height: 515, alt: "Studi kasus dan kebutuhan sistem", caption: "Studi kasus dan kebutuhan sistem" }
             ],
             stats: [
                 ['15', 'Node'],
@@ -334,12 +334,12 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Evaluasi HIMATIKA Mengajar Gen 5',
             summary: 'Evaluasi perubahan hasil belajar peserta didik setelah kegiatan HIMATIKA Mengajar Gen 5 di SDN Cikoneng. Analisis menggunakan pendekatan kuantitatif pretest dan posttest.',
             gallery: [
-                { src: "assets/images/projects/himatika-mengajar/himeng-visual-01.png", alt: "Perbandingan rata-rata nilai pretest dan posttest", caption: "Perbandingan rata-rata nilai pretest dan posttest" },
-                { src: "assets/images/projects/himatika-mengajar/himeng-visual-02.png", alt: "Distribusi perubahan nilai peserta", caption: "Distribusi perubahan nilai peserta" },
-                { src: "assets/images/projects/himatika-mengajar/himeng-visual-03.png", alt: "Effect size program HIMATIKA Mengajar", caption: "Effect size program HIMATIKA Mengajar" },
-                { src: "assets/images/projects/himatika-mengajar/himeng-visual-04.png", alt: "Visualisasi ringkasan hasil analisis", caption: "Visualisasi ringkasan hasil analisis" },
-                { src: "assets/images/projects/himatika-mengajar/himeng-visual-05.png", alt: "Perbandingan hasil berdasarkan kelas", caption: "Perbandingan hasil berdasarkan kelas" },
-                { src: "assets/images/projects/himatika-mengajar/himeng-visual-06.png", alt: "Rekapitulasi data hasil evaluasi", caption: "Rekapitulasi data hasil evaluasi" }
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-01.png", webpSrc: "assets/images/projects/himatika-mengajar/himeng-visual-01.webp", width: 249, height: 152, alt: "Perbandingan rata-rata nilai pretest dan posttest", caption: "Perbandingan rata-rata nilai pretest dan posttest" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-02.png", webpSrc: "assets/images/projects/himatika-mengajar/himeng-visual-02.webp", width: 250, height: 339, alt: "Distribusi perubahan nilai peserta", caption: "Distribusi perubahan nilai peserta" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-03.png", webpSrc: "assets/images/projects/himatika-mengajar/himeng-visual-03.webp", width: 249, height: 167, alt: "Effect size program HIMATIKA Mengajar", caption: "Effect size program HIMATIKA Mengajar" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-04.png", webpSrc: "assets/images/projects/himatika-mengajar/himeng-visual-04.webp", width: 246, height: 376, alt: "Visualisasi ringkasan hasil analisis", caption: "Visualisasi ringkasan hasil analisis" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-05.png", webpSrc: "assets/images/projects/himatika-mengajar/himeng-visual-05.webp", width: 250, height: 151, alt: "Perbandingan hasil berdasarkan kelas", caption: "Perbandingan hasil berdasarkan kelas" },
+                { src: "assets/images/projects/himatika-mengajar/himeng-visual-06.png", webpSrc: "assets/images/projects/himatika-mengajar/himeng-visual-06.webp", width: 513, height: 310, alt: "Rekapitulasi data hasil evaluasi", caption: "Rekapitulasi data hasil evaluasi" }
             ],
             stats: [
                 ['83', 'Peserta didik'],
@@ -372,13 +372,13 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Campus Electric Transportation Satisfaction',
             summary: 'Pemodelan faktor-faktor yang berhubungan dengan kepuasan pengguna layanan transportasi listrik kampus UIN Jakarta menggunakan regresi linear dan pengembangan model kandidat.',
             gallery: [
-                { src: "assets/images/projects/model-linear/model-linear-visual-01.png", alt: "Ringkasan analisis kepuasan pengguna", caption: "Ringkasan analisis kepuasan pengguna" },
-                { src: "assets/images/projects/model-linear/model-linear-visual-03.png", alt: "Matriks korelasi antarvariabel", caption: "Matriks korelasi antarvariabel" },
-                { src: "assets/images/projects/model-linear/model-linear-visual-04.png", alt: "Normal Q-Q plot residual", caption: "Normal Q-Q plot residual" },
-                { src: "assets/images/projects/model-linear/model-linear-visual-05.png", alt: "Distribusi residual model", caption: "Distribusi residual model" },
-                { src: "assets/images/projects/model-linear/model-linear-visual-06.png", alt: "Diagnostik residual model", caption: "Diagnostik residual model" },
-                { src: "assets/images/projects/model-linear/model-linear-visual-07.png", alt: "Hubungan kemudahan akses dan kepuasan", caption: "Hubungan kemudahan akses dan kepuasan" },
-                { src: "assets/images/projects/model-linear/model-linear-visual-08.png", alt: "Interaksi kemudahan akses dan kecepatan", caption: "Interaksi kemudahan akses dan kecepatan" }
+                { src: "assets/images/projects/model-linear/model-linear-visual-01.png", webpSrc: "assets/images/projects/model-linear/model-linear-visual-01.webp", width: 447, height: 305, alt: "Ringkasan analisis kepuasan pengguna", caption: "Ringkasan analisis kepuasan pengguna" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-03.png", webpSrc: "assets/images/projects/model-linear/model-linear-visual-03.webp", width: 304, height: 259, alt: "Matriks korelasi antarvariabel", caption: "Matriks korelasi antarvariabel" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-04.png", webpSrc: "assets/images/projects/model-linear/model-linear-visual-04.webp", width: 261, height: 199, alt: "Normal Q-Q plot residual", caption: "Normal Q-Q plot residual" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-05.png", webpSrc: "assets/images/projects/model-linear/model-linear-visual-05.webp", width: 258, height: 200, alt: "Distribusi residual model", caption: "Distribusi residual model" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-06.png", webpSrc: "assets/images/projects/model-linear/model-linear-visual-06.webp", width: 394, height: 273, alt: "Diagnostik residual model", caption: "Diagnostik residual model" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-07.png", webpSrc: "assets/images/projects/model-linear/model-linear-visual-07.webp", width: 429, height: 325, alt: "Hubungan kemudahan akses dan kepuasan", caption: "Hubungan kemudahan akses dan kepuasan" },
+                { src: "assets/images/projects/model-linear/model-linear-visual-08.png", webpSrc: "assets/images/projects/model-linear/model-linear-visual-08.webp", width: 433, height: 327, alt: "Interaksi kemudahan akses dan kecepatan", caption: "Interaksi kemudahan akses dan kecepatan" }
             ],
             stats: [
                 ['134', 'Responden valid'],
@@ -411,8 +411,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'IMC 2026 — Infographic Challenge',
             summary: 'Karya infografis ilmiah dalam IPB Mathematics Challenge 2026 bersama tim Wani Fit-in Histogram (WFH), dengan topik prediksi risiko keterlambatan penerbangan menggunakan Machine Learning.',
             gallery: [
-                { src: "assets/images/projects/imc-2026/imc-team-poster.webp", alt: "Poster tim Wani Fit-in Histogram (WFH)", caption: "Poster tim Wani Fit-in Histogram (WFH)" },
-                { src: "assets/images/projects/imc-2026/imc-documentation-01.jpg", alt: "Dokumentasi kegiatan IMC 2026", caption: "Dokumentasi kegiatan IMC 2026" }
+                { src: "assets/images/projects/imc-2026/imc-team-poster.webp", width: 1152, height: 1536, alt: "Poster tim Wani Fit-in Histogram (WFH)", caption: "Poster tim Wani Fit-in Histogram (WFH)" },
+                { src: "assets/images/projects/imc-2026/imc-documentation-01.jpg", width: 1536, height: 827, alt: "Dokumentasi kegiatan IMC 2026", caption: "Dokumentasi kegiatan IMC 2026" }
             ],
             stats: [
                 ['National Finalist', 'Pencapaian kompetisi'],
@@ -460,8 +460,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Staff Departemen INVERS',
             summary: 'Terlibat dalam kegiatan Departemen INVERS HIMATIKA UIN Jakarta pada periode 2026–2027.',
             gallery: [
-                { src: 'assets/images/experience/invers/invers-01.jpg', alt: 'Foto Staff Invers HIMATIKA', caption: 'Foto Staff Invers HIMATIKA' },
-                { src: 'assets/images/experience/invers/invers-02.jpg', alt: 'Foto bersama staff HIMATIKA', caption: 'Foto bersama staff HIMATIKA' }
+                { src: 'assets/images/experience/invers/invers-01.jpg', width: 1536, height: 1024, alt: 'Foto Staff Invers HIMATIKA', caption: 'Foto Staff Invers HIMATIKA' },
+                { src: 'assets/images/experience/invers/invers-02.jpg', width: 1536, height: 1024, alt: 'Foto bersama staff HIMATIKA', caption: 'Foto bersama staff HIMATIKA' }
             ],
             sections: [
                 { title: 'Peran', text: 'Staff Departemen INVERS HIMATIKA UIN Jakarta.' },
@@ -487,11 +487,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Ketua Pelaksana — HIMATIKA Mengajar Gen 5',
             summary: 'Memimpin perencanaan dan pelaksanaan program HIMATIKA Mengajar Gen 5 serta mengoordinasikan panitia dan pihak terkait.',
             gallery: [
-                { src: 'assets/images/experience/himeng-gen5/himeng5-01.jpg', alt: 'Dokumentasi HIMATIKA Mengajar Gen 5', caption: 'Dokumentasi kegiatan' },
-                { src: 'assets/images/experience/himeng-gen5/himeng5-02.jpg', alt: 'Kebersamaan tim HIMATIKA Mengajar Gen 5', caption: 'Kebersamaan tim' },
-                { src: 'assets/images/experience/himeng-gen5/himeng5-03.jpg', alt: 'Sambutan Ketua Pelaksana', caption: 'Sambutan Ketua Pelaksana' },
-                { src: 'assets/images/experience/himeng-gen5/himeng5-04.jpg', alt: 'Penyerahan sertifikat kepada pihak sekolah', caption: 'Penyerahan sertifikat' },
-                { src: 'assets/images/experience/himeng-gen5/himeng5-05.jpg', alt: 'Interaksi dan pendampingan peserta didik', caption: 'Interaksi dan pendampingan peserta didik' }
+                { src: 'assets/images/experience/himeng-gen5/himeng5-01.jpg', width: 1536, height: 1024, alt: 'Dokumentasi HIMATIKA Mengajar Gen 5', caption: 'Dokumentasi kegiatan' },
+                { src: 'assets/images/experience/himeng-gen5/himeng5-02.jpg', width: 1536, height: 1024, alt: 'Kebersamaan tim HIMATIKA Mengajar Gen 5', caption: 'Kebersamaan tim' },
+                { src: 'assets/images/experience/himeng-gen5/himeng5-03.jpg', width: 1536, height: 1024, alt: 'Sambutan Ketua Pelaksana', caption: 'Sambutan Ketua Pelaksana' },
+                { src: 'assets/images/experience/himeng-gen5/himeng5-04.jpg', width: 1536, height: 1024, alt: 'Penyerahan sertifikat kepada pihak sekolah', caption: 'Penyerahan sertifikat' },
+                { src: 'assets/images/experience/himeng-gen5/himeng5-05.jpg', width: 1536, height: 1024, alt: 'Interaksi dan pendampingan peserta didik', caption: 'Interaksi dan pendampingan peserta didik' }
             ],
             sections: [
                 { title: 'Kepemimpinan Program', text: 'Memimpin keseluruhan proses perencanaan dan pelaksanaan program serta mengoordinasikan divisi dan anggota kepanitiaan.' },
@@ -506,9 +506,9 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Ketua Pelaksana — MUSYAKA 2026',
             summary: 'Memimpin proses perencanaan dan pelaksanaan MUSYAKA 2026 serta mengoordinasikan divisi, panitia, dan kebutuhan operasional kegiatan.',
             gallery: [
-                { src: 'assets/images/experience/musyaka/musyaka-01.jpg', alt: 'Dokumentasi kegiatan MUSYAKA', caption: 'Dokumentasi kegiatan MUSYAKA' },
-                { src: 'assets/images/experience/musyaka/musyaka-02.jpg', alt: 'Sambutan Ketua Pelaksana', caption: 'Sambutan Ketua Pelaksana' },
-                { src: 'assets/images/experience/musyaka/musyaka-03.jpg', alt: 'Dokumentasi tambahan MUSYAKA 2026', caption: 'Dokumentasi MUSYAKA 2026' }
+                { src: 'assets/images/experience/musyaka/musyaka-01.jpg', width: 1536, height: 1024, alt: 'Dokumentasi kegiatan MUSYAKA', caption: 'Dokumentasi kegiatan MUSYAKA' },
+                { src: 'assets/images/experience/musyaka/musyaka-02.jpg', width: 1536, height: 1024, alt: 'Sambutan Ketua Pelaksana', caption: 'Sambutan Ketua Pelaksana' },
+                { src: 'assets/images/experience/musyaka/musyaka-03.jpg', width: 1536, height: 1152, alt: 'Dokumentasi tambahan MUSYAKA 2026', caption: 'Dokumentasi MUSYAKA 2026' }
             ],
             sections: [
                 { title: 'Kepemimpinan', text: 'Memimpin keseluruhan proses perencanaan dan pelaksanaan kegiatan serta mengoordinasikan divisi dan anggota kepanitiaan.' },
@@ -523,9 +523,9 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Kepala Divisi Lapangan — Teorema 15',
             summary: 'Mengoordinasikan operasional lapangan, logistik, personel, serta kebutuhan lokasi dan akomodasi kegiatan.',
             gallery: [
-                { src: 'assets/images/experience/teorema15/teorema15-01.jpg', alt: 'Dokumentasi peserta dan panitia Teorema 15', caption: 'Dokumentasi peserta dan panitia' },
-                { src: 'assets/images/experience/teorema15/teorema15-02.jpg', alt: 'Dokumentasi peserta, panitia, serta tamu undangan', caption: 'Dokumentasi peserta, panitia, serta tamu undangan' },
-                { src: 'assets/images/experience/teorema15/teorema15-03.jpg', alt: 'Dokumentasi tim Teorema 15', caption: 'Kebersamaan tim' }
+                { src: 'assets/images/experience/teorema15/teorema15-01.jpg', width: 1536, height: 1024, alt: 'Dokumentasi peserta dan panitia Teorema 15', caption: 'Dokumentasi peserta dan panitia' },
+                { src: 'assets/images/experience/teorema15/teorema15-02.jpg', width: 1536, height: 864, alt: 'Dokumentasi peserta, panitia, serta tamu undangan', caption: 'Dokumentasi peserta, panitia, serta tamu undangan' },
+                { src: 'assets/images/experience/teorema15/teorema15-03.jpg', width: 1536, height: 1024, alt: 'Dokumentasi tim Teorema 15', caption: 'Kebersamaan tim' }
             ],
             sections: [
                 { title: 'Tanggung Jawab', text: 'Mengoordinasikan operasional lapangan dan kebutuhan logistik, mencari serta mengatur lokasi kegiatan dan akomodasi peserta, serta menyusun pembagian kamar dan tata letak akomodasi.' }
@@ -550,9 +550,9 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Kepala Divisi Logistik — PBAK Jurusan Matematika 2025',
             summary: 'Bertanggung jawab atas pengelolaan kebutuhan logistik dan pendistribusian perlengkapan operasional kegiatan.',
             gallery: [
-                { src: 'assets/images/experience/pbak-2025/pbak-01.jpg', alt: 'Foto bersama peserta dan panitia PBAK', caption: 'Foto bersama peserta dan panitia PBAK' },
-                { src: 'assets/images/experience/pbak-2025/pbak-02.jpg', alt: 'Koordinasi kegiatan PBAK', caption: 'Koordinasi kegiatan PBAK' },
-                { src: 'assets/images/experience/pbak-2025/pbak-03.jpg', alt: 'Dokumentasi kegiatan PBAK', caption: 'Dokumentasi kegiatan PBAK' }
+                { src: 'assets/images/experience/pbak-2025/pbak-01.jpg', width: 1536, height: 1024, alt: 'Foto bersama peserta dan panitia PBAK', caption: 'Foto bersama peserta dan panitia PBAK' },
+                { src: 'assets/images/experience/pbak-2025/pbak-02.jpg', width: 1536, height: 1153, alt: 'Koordinasi kegiatan PBAK', caption: 'Koordinasi kegiatan PBAK' },
+                { src: 'assets/images/experience/pbak-2025/pbak-03.jpg', width: 1536, height: 864, alt: 'Dokumentasi kegiatan PBAK', caption: 'Dokumentasi kegiatan PBAK' }
             ],
             sections: [
                 { title: 'Tanggung Jawab', text: 'Mengelola kebutuhan logistik kegiatan, mengatur persediaan perlengkapan operasional, dan mendukung pendistribusian perlengkapan agar kebutuhan kegiatan terpenuhi.' }
@@ -566,10 +566,10 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Staff Hubungan Masyarakat — HIMATIKA Mengajar Gen 4',
             summary: 'Mendukung komunikasi dan hubungan dengan peserta serta pihak-pihak terkait selama pelaksanaan HIMATIKA Mengajar Gen 4.',
             gallery: [
-                { src: 'assets/images/experience/himeng-gen4/himeng4-01.jpg', alt: 'Dokumentasi MC Himatika Mengajar Gen 4', caption: 'Dokumentasi MC Himatika Mengajar Gen 4' },
-                { src: 'assets/images/experience/himeng-gen4/himeng4-02.jpg', alt: 'Foto bersama tim pelaksana', caption: 'Foto bersama tim pelaksana' },
-                { src: 'assets/images/experience/himeng-gen4/himeng4-03.jpg', alt: 'Dokumentasi kegiatan bersama peserta didik', caption: 'Dokumentasi kegiatan bersama peserta didik' },
-                { src: 'assets/images/experience/himeng-gen4/himeng4-04.jpg', alt: 'Foto bersama peserta kegiatan', caption: 'Foto bersama peserta kegiatan' }
+                { src: 'assets/images/experience/himeng-gen4/himeng4-01.jpg', width: 1536, height: 864, alt: 'Dokumentasi MC Himatika Mengajar Gen 4', caption: 'Dokumentasi MC Himatika Mengajar Gen 4' },
+                { src: 'assets/images/experience/himeng-gen4/himeng4-02.jpg', width: 1152, height: 1536, alt: 'Foto bersama tim pelaksana', caption: 'Foto bersama tim pelaksana' },
+                { src: 'assets/images/experience/himeng-gen4/himeng4-03.jpg', width: 1536, height: 864, alt: 'Dokumentasi kegiatan bersama peserta didik', caption: 'Dokumentasi kegiatan bersama peserta didik' },
+                { src: 'assets/images/experience/himeng-gen4/himeng4-04.jpg', width: 1536, height: 1023, alt: 'Foto bersama peserta kegiatan', caption: 'Foto bersama peserta kegiatan' }
             ],
             sections: [
                 { title: 'Tanggung Jawab', text: 'Membantu komunikasi dan penyampaian informasi kepada peserta serta pihak terkait, sekaligus mendukung koordinasi hubungan masyarakat untuk kelancaran kegiatan.' }
@@ -623,7 +623,20 @@ document.addEventListener('DOMContentLoaded', () => {
                                     class="project-gallery-trigger"
                                     data-gallery-index="${index}"
                                     aria-label="Perbesar gambar: ${item.alt}">
-                                <img src="${item.src}" alt="${item.alt}" loading="lazy">
+                                <picture>
+                                    ${item.webpSrcset
+                                        ? `<source type="image/webp" srcset="${item.webpSrcset}" sizes="${item.webpSizes}">`
+                                        : item.webpSrc
+                                            ? `<source type="image/webp" srcset="${item.webpSrc}">`
+                                            : ''}
+                                    <img src="${item.src}"
+                                         alt="${item.alt}"
+                                         width="${item.width}"
+                                         height="${item.height}"
+                                         data-full-src="${item.src}"
+                                         loading="lazy"
+                                         decoding="async">
+                                </picture>
                                 <span class="project-gallery-caption">${item.caption}</span>
                                 <span class="project-gallery-zoom" aria-hidden="true">⤢</span>
                             </button>
@@ -725,7 +738,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!image) return;
         activeGalleryTrigger = trigger;
         const lightboxImage = imageLightbox.querySelector('.project-image-lightbox-img');
-        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.src = image.dataset.fullSrc || image.currentSrc || image.src;
         lightboxImage.alt = image.alt;
         imageLightbox.querySelector('.project-image-lightbox-caption').textContent =
             trigger.querySelector('.project-gallery-caption')?.textContent || image.alt;
